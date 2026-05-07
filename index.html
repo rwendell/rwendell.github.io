@@ -1,359 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title>Ryan Wendell</title>
-    <meta name="description" content="Senior software engineer with 4+ years of experience building full-stack features, optimizing data pipelines, and driving Agile delivery across cross-functional teams. Proficient in Java, TypeScript, React, and cloud infrastructure with a track record of improving operational stability and mentoring developers.">
-  <meta name="viewport" content="width=device-width, minimal-ui">
-  <meta name="resume-version" content="v1.0.0">
-  <style>body {
-  font-family: "Times New Roman", Times, serif;
-  /* 13px to 15px looks good */
-  font-size: 15px;
-  /* 1.38, 1.4, or 1.5 looks good */
-  line-height: 1.4;
-  margin: 0 auto;
-}
-
-#wrapper {
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-/* when generating the resume as a website or as headless, this will keep a nice readable margin in place */
-#resume {
-  margin: 0.4in;
-}
-
-/* use-case is when a user generates their resume as a website, saves their website as a PDF, and uses their browser to manage the margins during save */
-@media print {
-  #resume {
-    margin: 0;
-  }
-}
-
-/* Page margins for PDF export (Puppeteer / print). Without this, the export defaults to ~0 margin. */
-@page {
-  margin: 0.5in;
-}
-
-ul {
-  margin-bottom: 0;
-}
-
-li {
-  margin-bottom: 2px;
-}
-
-a {
-  color: black;
-  /* it's less likely someone will click the links; removing underline to reduce noise */
-  text-decoration: none;
-}
-
-.display-none {
-  /* simply turns off the display in the div */
-  display: none;
-}
-
-.basics {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.basics-name {
-  font-size: 33px;
-  font-weight: normal;
-  margin: 0 0 2px 0;
-  line-height: 1.1;
-}
-
-.basics-contact-row {
-  font-size: 13px;
-  line-height: 1.2;
-}
-
-.basics-contact-row:empty {
-  display: none;
-}
-
-.basics-contact-item + .basics-contact-item::before {
-  content: "·";
-  margin: 0 6px;
-}
-
-.section-block {
-  display: block;
-  width: 100%;
-}
-
-.section-name {
-  color: #004687;
-  display: block;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.section-line {
-  border-color: none;
-  border-style: hidden;
-  border-width: 1px;
-  margin-top: 3px;
-  margin-bottom: 3px;
-}
-
-.section-intro-line {
-  border-color: #004687;
-  border-style: solid;
-  border-width: 1px;
-  margin-top: 0px;
-  margin-bottom: 3px;
-}
-
-#work-block .block-header,
-#volunteer .block-header {
-  display: flex;
-  align-items: center;
-}
-
-.block-header .date {
-  font-weight: normal;
-  font-style: italic;
-  color: #555;
-  text-align: right;
-  margin-left: auto;
-  white-space: nowrap;
-}
-
-.block-header .organization {
-  font-weight: bold;
-  text-align: left;
-}
-
-#work-block .block-header .organization {
-  font-weight: normal;
-  font-style: italic;
-  color: #555;
-}
-
-.block-header .title {
-  font-weight: 600;
-  font-size: 16px;
-  text-align: left;
-}
-
-#work-block .block-header .organization::before,
-#volunteer .block-header .organization::before {
-  content: "\00a0|\00a0";
-  font-weight: normal;
-}
-
-.section-content {
-  display: block;
-  line-height: 1.15;
-  padding-left: 6px;
-}
-
-.section-content ul {
-  padding-left: 20px;
-  margin-top: 3px;
-  list-style-type: circle;
-}
-
-.highlights li {
-  margin-bottom: 0;
-}
-
-.job-meta {
-  font-style: italic;
-  color: #555;
-}
-
-.job-summary {
-  margin-top: 3px;
-}
-
-.section-content .title {
-  font-weight: bold;
-}
-
-.section-content .date {
-  float: right;
-}
-
-.section-content .separator {
-  height: 4px;
-}
-
-.summary {
-  margin-top: 6px;
-}
-
-.job-block {
-  page-break-inside: avoid;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Wendell</title>
+    <style>
+        * { margin:0; padding:0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        nav {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding: 0 2rem;
+            gap: 0;
+        }
+        nav button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #666;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        nav button:hover { color: #333; }
+        nav button.active {
+            color: #1a1a1a;
+            border-bottom-color: #1a1a1a;
+            font-weight: 600;
+        }
+        .download-btn {
+            margin-left: auto;
+            padding: 0.5rem 1rem;
+            border: 1px solid #e0e0e0;
+            background: white;
+            cursor: pointer;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.2s;
+        }
+        .download-btn:hover { background: #f5f5f5; }
+        .download-btn.hidden { display: none; }
+        iframe {
+            width: 100%;
+            border: none;
+            height: calc(100vh - 50px);
+        }
+    </style>
 </head>
-
 <body>
-  <div id="wrapper">
-    <div id="resume">
-        <div class="basics">
-          <h1 class="basics-name">Ryan Wendell</h1>
+    <nav id="nav">
+        <a id="download" class="download-btn hidden" download>Download PDF</a>
+    </nav>
+    <iframe id="frame"></iframe>
+    <script>
+        const resumes = [
+            { id: 'software-engineer', label: 'Software Engineer', pdf: true },
+            { id: 'barista', label: 'Barista', pdf: true },
+        ];
+        const defaultResume = 'software-engineer';
 
-          <div class="basics-contact-row">
-                <span class="basics-contact-item">Chicago, Illinois</span>
-              <span class="basics-contact-item"><a href="mailto:ryanjwendell@gmail.com">ryanjwendell@gmail.com</a></span>
-              <span class="basics-contact-item"><a href="tel:(224) 723-4213">(224)&nbsp;723&#8209;4213</a></span>
-          </div>
+        const frame = document.getElementById('frame');
+        const nav = document.getElementById('nav');
+        const downloadBtn = document.getElementById('download');
 
-            <div class="basics-contact-row">
-              <span class="basics-contact-item"><a href="https://rwendell.github.io">https://rwendell.github.io</a></span>
-                  <span class="basics-contact-item"><a href="https://www.linkedin.com/in/rjwendell/">linkedin.com/in/rjwendell</a></span>
-                  <span class="basics-contact-item"><a href="https://github.com/rwendell">github.com/rwendell</a></span>
-            </div>
-        </div>
-        <div id="summary-block" class="section-block">
-          <div class="section-content">
-            <span>Senior software engineer with 4+ years of experience building full-stack features, optimizing data pipelines, and driving Agile delivery across cross-functional teams. Proficient in Java, TypeScript, React, and cloud infrastructure with a track record of improving operational stability and mentoring developers.</span>
-          </div>
-        </div>
-        <div class="section-line"></div>
-        <div id="work-block" class="section-block">
-          <div class="section-intro">
-            <div class="section-name">
-              <span>Experience</span>
-            </div>
-            <div class="section-intro-line"></div>
-          </div>
-          <div class="section-content">
-              <div class="job-block">
-                <div class="block-header">
-                  <span class="title">Senior Associate - Software Engineer</span>
-                  <span class="date">
-                    <time datetime="2022-08">Aug 2022</time> &mdash;
-                    <time datetime="2026-02">Feb 2026</time>
-                  </span>
-                </div>
+        function load(id) {
+            const resume = resumes.find(r => r.id === id) || resumes.find(r => r.id === defaultResume);
+            frame.src = resume.id + '.html';
+            location.hash = resume.id;
+            
+            document.querySelectorAll('nav button').forEach(b =>
+                b.classList.toggle('active', b.dataset.resume === resume.id));
+            
+            if (resume.pdf) {
+                downloadBtn.href = resume.id + '.pdf';
+                downloadBtn.download = resume.id + '.pdf';
+                downloadBtn.classList.remove('hidden');
+            } else {
+                downloadBtn.classList.add('hidden');
+            }
+        }
 
-                <div class="job-meta">Northern Trust</div>
+        resumes.forEach(r => {
+            const btn = document.createElement('button');
+            btn.textContent = r.label;
+            btn.dataset.resume = r.id;
+            btn.onclick = () => load(r.id);
+            nav.insertBefore(btn, downloadBtn);
+        });
 
-                <div class="display-none">
-                </div>
-
-                  <div class="job-summary">Full-stack engineer on enterprise financial platforms, leading feature delivery and cross-functional collaboration across international teams.</div>
-
-                  <ul class="highlights">
-                      <li>Led the end-to-end lifecycle of large-scale features for global partners, overseeing design, test driven development (JUnit, Jest), deployment, and ongoing support across cross-functional teams.</li>
-                      <li>Established functional requirements by collaborating across departments on API specifications, stored procedure interfaces, business logic, and expected outcomes to ensure solutions aligned with organizational needs.</li>
-                      <li>Streamlined data operations by consolidating disparate historical storage into Snowflake on Azure, optimizing storage costs while ensuring high availability for cross-functional teams.</li>
-                      <li>Drove Agile methodology adoption through story creation, sprint refinement, and iterative delivery for international integrations.</li>
-                      <li>Produced technical documentation including system specifications, process flowcharts, and maintenance guides to support knowledge transfer and long-term maintainability.</li>
-                      <li>Improved operational stability by conducting system analysis and engineering automated health-check tooling and validation scripts to proactively detect and remediate deployment regressions.</li>
-                      <li>Optimized application performance through advanced Oracle SQL schema design, stored procedure development, JPA/Hibernate ORM for efficient entity mapping and query optimization, and high-throughput multi-threaded Apache Kafka pipelines processing 2.5M daily transactions.</li>
-                      <li>Developed full-stack features using TypeScript, React, and Redux on the frontend and Spring Boot with Java 21 on the backend, integrating with internal enterprise systems.</li>
-                      <li>Mentored and supported junior developers through code reviews, technical guidance, and documented troubleshooting strategies to elevate team capability.</li>
-                      <li>Evaluated and applied emerging technologies and frameworks to continuously improve software quality and development processes.</li>
-                  </ul>
-                  <div class="separator"></div>
-              </div>
-              <div class="job-block">
-                <div class="block-header">
-                  <span class="title">Software Engineer Consultant</span>
-                  <span class="date">
-                    <time datetime="2021-12">Dec 2021</time> &mdash;
-                    <time datetime="2022-06">Jun 2022</time>
-                  </span>
-                </div>
-
-                <div class="job-meta">BluBracket (acquired by HashiCorp)</div>
-
-                <div class="display-none">
-                </div>
-
-                  <div class="job-summary">Built security tooling for automated vulnerability detection and remediation across source code, developer environments, and CI/CD pipelines.</div>
-
-                  <ul class="highlights">
-                      <li>Built a React/Redux security dashboard focused on automated vulnerability detection and remediation within source code, developer environments, and CI/CD pipelines.</li>
-                      <li>Resolved critical logic flaws in security risk-scoring algorithms, ensuring data accuracy and reducing false-positive alerts for enterprise clients.</li>
-                      <li>Implemented automated testing suites using Jest and Cypress, ensuring high feature reliability and UI performance across staging and production environments.</li>
-                      <li>Ensured accessibility (a11y) compliance across the web application, implementing keyboard navigation and ARIA attributes to support screen-reader users and diverse accessibility needs.</li>
-                  </ul>
-                  <div class="separator"></div>
-              </div>
-              <div class="job-block">
-                <div class="block-header">
-                  <span class="title">BPA Developer</span>
-                  <span class="date">
-                    <time datetime="2021-03">Mar 2021</time> &mdash;
-                    <time datetime="2021-12">Dec 2021</time>
-                  </span>
-                </div>
-
-                <div class="job-meta">Impact Networking, LLC</div>
-
-                <div class="display-none">
-                </div>
-
-                  <div class="job-summary">Developed full-stack automation solutions to streamline enterprise business processes.</div>
-
-                  <ul class="highlights">
-                      <li>Orchestrated full-stack automation solutions using C#/.NET and SQL to streamline enterprise workflows across OCR, HR, and fundraising departments.</li>
-                  </ul>
-              </div>
-          </div>
-        </div>
-        <div class="section-line"></div>
-        <div id="projects" class="section-block">
-          <div class="section-intro">
-            <div class="section-name">
-              <span>Projects</span>
-            </div>
-            <div class="section-intro-line"></div>
-          </div>
-          <div class="section-content">
-            <ul class="highlights">
-                <li>
-                    <span class="title"><a href="https://github.com/Achno/gowall">Gowall</a>: </span>
-                      <span>1.4k GitHub stars</span>.
-                      <span>Built with Go, featuring GAN-based upscaling and hybrid VLM OCR</span>.
-                </li>
-                <li>
-                    <span class="title"><a href="https://github.com/rwendell/slippi-postgame-cli">slippi-postgame-cli</a>: </span>
-                      <span>Node.js, TypeScript, YARGS based CLI application that reads serial data and performs statistical analytics</span>.
-                </li>
-                <li>
-                    <span class="title"><a href="https://github.com/rwendell/gc-adapter">gc-adapter</a>: </span>
-                      <span>Node.js, TypeScript, WebUSB implementation for reading inputs from a GameCube adapter</span>.
-                </li>
-            </ul>
-          </div>
-        </div>
-        <div class="section-line"></div>
-        <div id="education" class="section-block">
-          <div class="section-intro">
-            <div class="section-name">
-              <span>Education</span>
-            </div>
-            <div class="section-intro-line"></div>
-          </div>
-          <div class="section-content">
-              <div class="block-header">
-                <span class="title">Iowa State University</span>
-                  <span class="date">
-                    Aug 2016 &mdash;
-                    Dec 2020
-                  </span>
-                <div class="">
-                  BS  - Computer Science
-                </div>
-              </div>
-          </div>
-        </div>
-        <div class="section-line"></div>
-    </div>
-  </div>
+        load(location.hash.slice(1) || defaultResume);
+    </script>
 </body>
-
 </html>
