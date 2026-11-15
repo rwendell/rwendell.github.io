@@ -5,7 +5,6 @@
 	import MailIcon from "@lucide/svelte/icons/mail";
 	import MapPinIcon from "@lucide/svelte/icons/map-pin";
 	import { toast } from "svelte-sonner";
-	import BrandIcon from "$lib/components/brand-icon.svelte";
 	import HexPattern from "$lib/components/hex-pattern.svelte";
 	import { Button } from "$lib/components/ui/button/index.js";
 	import { site } from "$lib/data/site";
@@ -69,17 +68,6 @@
 								<CopyIcon class="size-4" />
 								Copy
 							{/if}
-						</Button>
-						<Button
-							variant="outline"
-							size="lg"
-							href={site.upwork}
-							target="_blank"
-							rel="noreferrer"
-							class="gap-2"
-						>
-							<BrandIcon name="upwork" class="size-4" />
-							Upwork
 						</Button>
 					</div>
 				</div>
