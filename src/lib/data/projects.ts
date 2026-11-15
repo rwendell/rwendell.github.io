@@ -153,7 +153,7 @@ export const projects: Project[] = [
 		tech: ["Base16", "Base24", "TOML", "Mustache", "Wallpapers"],
 		highlights: [
 			"Converts wallpapers to a selected Base16/Base24 theme with gowall.",
-			"Contributed 13 commits to the project.",
+			"Lead developer and maintainer of the project.",
 			"Ships theme files and a Tinty item config for one-command use.",
 		],
 		repo: "https://github.com/tinted-theming/tinted-gowall",

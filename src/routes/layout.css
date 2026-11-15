@@ -192,7 +192,7 @@
 
 @layer base {
 	* {
-		@apply border-border outline-ring/50;
+		@apply border-border;
 	}
 
 	html {
@@ -353,6 +353,20 @@
 		);
 	}
 
+	.hex-pattern {
+		color: var(--border);
+		opacity: 0.3;
+		mask-image: radial-gradient(
+			ellipse 72% 68% at 50% 32%,
+			black 12%,
+			transparent 78%
+		);
+	}
+
+	.dark .hex-pattern {
+		opacity: 0.5;
+	}
+
 	.noise-overlay {
 		position: fixed;
 		inset: 0;
@@ -363,27 +377,7 @@
 	}
 
 	.dark .noise-overlay {
-		opacity: 0.055;
-	}
-
-	.hero-grid {
-		background-image:
-			linear-gradient(
-				to right,
-				color-mix(in srgb, var(--border) 38%, transparent) 1px,
-				transparent 1px
-			),
-			linear-gradient(
-				to bottom,
-				color-mix(in srgb, var(--border) 38%, transparent) 1px,
-				transparent 1px
-			);
-		background-size: 3.5rem 3.5rem;
-		mask-image: radial-gradient(
-			ellipse 70% 65% at 50% 35%,
-			black 20%,
-			transparent 78%
-		);
+		display: none;
 	}
 
 	.scrollbar-none {

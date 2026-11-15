@@ -38,7 +38,7 @@
 	<meta name="twitter:image" content={`${site.url}/og.png`} />
 	<meta name="twitter:image:alt" content={`${site.name} — ${site.role}`} />
 
-	<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ryan Wendell","jobTitle":"Frontend Software Engineer","url":"https://rwendell.github.io","email":"mailto:ryanjwendell@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"},"sameAs":["https://github.com/rwendell","https://www.linkedin.com/in/rjwendell/"],"knowsAbout":["TypeScript","React","SvelteKit","Tailwind CSS","Accessibility","Design systems","Full-stack engineering"]}</script>
+	<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ryan Wendell","jobTitle":"Frontend Software Engineer","url":"https://rwendell.github.io","email":"mailto:ryanjwendell@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Chicago","addressRegion":"IL","addressCountry":"US"},"sameAs":["https://github.com/rwendell","https://www.linkedin.com/in/rjwendell/","https://www.upwork.com/freelancers/~01fbe3cf033cea5004"],"knowsAbout":["TypeScript","React","SvelteKit","Tailwind CSS","Accessibility","Design systems","Backend engineering"]}</script>
 </svelte:head>
 
 <ModeWatcher

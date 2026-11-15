@@ -39,21 +39,22 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 - Fonts: Instrument Sans for UI, Monaspace Neon for mono accents. The CSS stack includes MonoLisa first for local installations, but MonoLisa is commercial and must not be bundled or redistributed.
 - Icons: use `@lucide/svelte` for interface icons. GitHub and LinkedIn brand marks come from `simple-icons` through `$lib/components/brand-icon.svelte`; do not hand-draw brand paths. `simple-icons` is pinned to 13.x because later releases no longer ship the LinkedIn mark.
 - Keep the warm, paper-like surface treatment: `paper-card`, `card-lift`, `eyebrow`, `mono-label`, `hairline`, `kissa-rule`.
+- Use the faded neutral hexagon pattern as the background motif. Do not add colored glow or bloom gradients.
 - Respect `prefers-reduced-motion`. Avoid motion that is required to understand content.
 
 ## Content
 
-- `src/lib/data/site.ts`: profile, summary, availability, experience, skills, education, resume metadata.
+- `src/lib/data/site.ts`: profile, summary, skills, principles, resume metadata.
 - `src/lib/data/projects.ts`: project order, descriptions, highlights, links, and dossier ranks. Display order is frontend-weighted; preserve the `dossierRank` values when editing.
 - Keep claims traceable. Do not add metrics, employers, dates, or project scope that is not supported by the dossier data, the resume, or a repository.
 - Organization projects should describe the user's contribution, not imply sole authorship.
 - All projects use the same two-column grid. Meal Planner leads the list.
 - Project cards lead with the category, name, tagline, and content. Year and role were intentionally removed from both the cards and the project data.
 - Every card has a top accent strip. Each project gets its own accent color; do not reuse one across cards.
-- Tinted Gowall is its own project entry with its own repository link. Do not collapse it back into an organization-level Tinted Theming card.
+- Tinted Gowall is its own project entry with its own repository link; the user is its lead developer and maintainer. Do not collapse it back into an organization-level Tinted Theming card.
 - Dossier, shadcn-add, and Tinted Gowall are text-only cards. Do not add previews or mockups to them.
 - SlippiOS uses its project mark at `static/projects/slippios/icon.png` and the real menu screenshot at `static/projects/slippios/menu.png`. The card carousel cycles through the menu, settings, and sign-in screens.
-- The hero carries the positioning statement and a short bio; About is `How I work` with principles, toolbox, and experience. Do not add a second bio to About.
+- The hero is the single about section: positioning, bio, toolbox, and principles. There is no separate About section; career history lives in the resume. Do not add a second bio or experience timeline.
 
 ## Project preview assets
 
@@ -61,15 +62,15 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 
 - `meal-planner/cookbook-card.png` and `planner-card.png`: live cookbook and planner screenshots for the card carousel. `cookbook.png` is the full source screenshot.
 - `slippios/menu.png`, `settings.png`, and `sign-in.png`: the three screens in the card carousel. `icon.png` is the project mark.
-- `kissa/logo.png`, `latte.png`, and `macchiato.png`: the wordmark and the two Neovim theme screenshots in the carousel.
+- `kissa/logo.png`, `latte-card.png`, and `macchiato-card.png`: the wordmark and the two zoomed Neovim theme crops used in the carousel. `latte.png` and `macchiato.png` are the full source screenshots.
 
-`ProjectCarousel` auto-advances every five seconds, pauses on hover or focus, and exposes manual dots. Respect `prefers-reduced-motion`: no auto-advance when reduced motion is requested. SlippiOS slides use `position: "top"` so the menu logo and screen titles stay visible. Preview panels are borderless; do not wrap screenshots in an outline. When replacing a screenshot, keep the same path or update the `src` in `project-preview.svelte`. Preserve the project's own branding; do not replace a real screenshot with a generic mockup when a real one exists.
+`ProjectCarousel` auto-advances every five seconds, pauses on hover or focus, and exposes manual dots. Respect `prefers-reduced-motion`: no auto-advance when reduced motion is requested. SlippiOS slides use `position: "top"` so the menu logo and screen titles stay visible. Preview images are full-bleed; do not wrap them in padding, borders, outlines, or tinted frames. When replacing a screenshot, keep the same path or update the `src` in `project-preview.svelte`. Preserve the project's own branding; do not replace a real screenshot with a generic mockup when a real one exists.
 
 ## Resume assets
 
-`static/resume/` contains `resume.pdf` and `resume-preview.png`. The JSON source lives at `src/lib/data/resume.json` and is imported raw by `resume-json.ts`; it powers the JSON view but is not published as a download. The resume section centers a single `ResumeViewer` with a `JSON` / `PDF` toggle and one download action; do not add a second download link for the JSON source.
+`static/resume/` contains `resume.pdf` and `resume-preview.png`. The resume section shows a single `ResumeViewer` with the PDF preview and one download action. Keep the section centered and omit JSON previews and JSON download links.
 
-Regenerate the PDF with `dossier tailor --generic --no-open --no-prompt --no-preflight --out <dir>`, copy the PDF and the JSON path printed by dossier, then render the preview with `pdftoppm` at 140 DPI. Copy the JSON to `src/lib/data/resume.json` to keep the code-block view in sync.
+Regenerate the PDF with `dossier tailor --generic --no-open --no-prompt --no-preflight --out <dir>`, copy the PDF, then render the preview with `pdftoppm` at 200 DPI.
 
 ## Deployment
 

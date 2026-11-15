@@ -5,6 +5,8 @@
 	import MailIcon from "@lucide/svelte/icons/mail";
 	import MapPinIcon from "@lucide/svelte/icons/map-pin";
 	import { toast } from "svelte-sonner";
+	import BrandIcon from "$lib/components/brand-icon.svelte";
+	import HexPattern from "$lib/components/hex-pattern.svelte";
 	import { Button } from "$lib/components/ui/button/index.js";
 	import { site } from "$lib/data/site";
 
@@ -29,19 +31,7 @@
 		<div
 			class="relative isolate overflow-hidden rounded-3xl border border-border/70 bg-card/55 px-6 py-10 shadow-paper sm:px-10 sm:py-14 lg:px-14"
 		>
-			<div
-				class="pointer-events-none absolute -top-32 right-[-10%] -z-10 size-[28rem] rounded-full bg-kissa-orange/15 blur-3xl"
-				aria-hidden="true"
-			></div>
-			<div
-				class="pointer-events-none absolute -bottom-40 left-[-10%] -z-10 size-[26rem] rounded-full bg-kissa-teal/12 blur-3xl"
-				aria-hidden="true"
-			></div>
-			<div
-				class="pointer-events-none absolute inset-0 -z-10 opacity-[0.07]"
-				style="background-image: linear-gradient(to right, var(--foreground) 1px, transparent 1px), linear-gradient(to bottom, var(--foreground) 1px, transparent 1px); background-size: 3rem 3rem; mask-image: radial-gradient(ellipse 60% 60% at 70% 40%, black, transparent);"
-				aria-hidden="true"
-			></div>
+			<HexPattern id="contact-hex" class="hex-pattern opacity-30" />
 
 			<div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
 				<div>
@@ -49,13 +39,12 @@
 					<h2
 						class="mt-3 max-w-[15ch] text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-6xl"
 					>
-						Let's build something that feels finished.
+						What are you working on?
 					</h2>
 					<p
 						class="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
 					>
-						Have a role or project in mind? Email is the fastest way to
-						reach me.
+						Email is the fastest way to reach me.
 					</p>
 
 					<div class="mt-8 flex flex-wrap items-center gap-3">
@@ -80,6 +69,17 @@
 								<CopyIcon class="size-4" />
 								Copy
 							{/if}
+						</Button>
+						<Button
+							variant="outline"
+							size="lg"
+							href={site.upwork}
+							target="_blank"
+							rel="noreferrer"
+							class="gap-2"
+						>
+							<BrandIcon name="upwork" class="size-4" />
+							Upwork
 						</Button>
 					</div>
 				</div>

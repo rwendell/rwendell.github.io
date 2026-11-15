@@ -11,10 +11,10 @@
 		<SectionHeading
 			eyebrow="Resume"
 			title="The short version."
-			description="One page. Preview it here or take the PDF with you."
+			description="One page. Preview it here or take the PDF."
 		/>
 
-		<div class="mx-auto mt-10 max-w-2xl sm:mt-12">
+		<div class="mt-10 sm:mt-12">
 			<ResumeViewer pdfSrc={site.resume.preview} />
 
 			<div class="mt-6 flex justify-center">

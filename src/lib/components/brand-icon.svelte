@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { siGithub, siLinkedin, siNpm } from "simple-icons";
+	import { siGithub, siLinkedin, siNpm, siUpwork } from "simple-icons";
 
 	interface Props {
-		name: "github" | "linkedin" | "npm";
+		name: "github" | "linkedin" | "npm" | "upwork";
 		class?: string;
 	}
 
@@ -12,6 +12,7 @@
 		github: siGithub,
 		linkedin: siLinkedin,
 		npm: siNpm,
+		upwork: siUpwork,
 	};
 
 	let icon = $derived(icons[name]);

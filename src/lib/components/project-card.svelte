@@ -27,9 +27,7 @@
 	<div class={cn("h-1 w-full shrink-0", palette.dot)} aria-hidden="true"></div>
 
 	{#if !textOnly}
-		<div class="p-4 pb-0 sm:p-5 sm:pb-0">
-			<ProjectPreview slug={project.slug} accent={project.accent} />
-		</div>
+		<ProjectPreview slug={project.slug} />
 	{/if}
 
 	<div class="flex flex-1 flex-col p-5 sm:p-6">

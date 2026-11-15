@@ -43,7 +43,7 @@
 
 <section
 	class={cn(
-		"relative h-full min-h-0 overflow-hidden rounded-lg bg-card",
+		"relative h-full min-h-0 overflow-hidden bg-card",
 		className
 	)}
 	aria-label="Project preview"
