@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+	<title>Ryan Wendell</title>
+	<rect width="64" height="64" rx="15" fill="#1F1C16" />
+	<path
+		d="M18 28h22v9.5A10.5 10.5 0 0 1 29.5 48h-1A10.5 10.5 0 0 1 18 37.5V28Z"
+		fill="none"
+		stroke="#FAF0E6"
+		stroke-width="3.2"
+		stroke-linejoin="round"
+	/>
+	<path
+		d="M40 31h3.5a5.5 5.5 0 0 1 0 11H40"
+		fill="none"
+		stroke="#FAF0E6"
+		stroke-width="3.2"
+		stroke-linecap="round"
+	/>
+	<path
+		d="M24 21.5c0-2.8 3.6-2.8 3.6-5.5M32 21.5c0-2.8 3.6-2.8 3.6-5.5"
+		fill="none"
+		stroke="#EAC67A"
+		stroke-width="2.6"
+		stroke-linecap="round"
+	/>
+</svg>

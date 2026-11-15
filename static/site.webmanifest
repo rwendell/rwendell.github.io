@@ -1,0 +1,17 @@
+{
+	"name": "Ryan Wendell — Frontend Software Engineer",
+	"short_name": "Ryan Wendell",
+	"description": "Frontend-focused software engineer in Chicago building accessible, data-heavy web apps with TypeScript, React, and SvelteKit.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#f5f4f0",
+	"theme_color": "#f5f4f0",
+	"icons": [
+		{
+			"src": "/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml",
+			"purpose": "any"
+		}
+	]
+}
