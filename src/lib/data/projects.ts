@@ -43,7 +43,7 @@ export const projects: Project[] = [
 		name: "Meal Planner",
 		tagline: "Dinner decided. Groceries synced.",
 		description:
-			"A multi-user household meal planner that turns shared weekly decisions into a synchronized grocery workflow: a recipe cookbook, real-time weekly planning, leftovers, and shopping lists in one place.",
+			"A multi-user meal planner for households: a recipe cookbook, a shared week, leftovers, and one grocery list that stays in sync.",
 		category: "Full-stack",
 		tech: [
 			"SvelteKit",
@@ -81,7 +81,7 @@ export const projects: Project[] = [
 		],
 		highlights: [
 			"Agent pipeline generates resumes, proposals, and answers from a local career fact bank.",
-			"Every generated claim carries an evidence id; outputs are verified before rendering.",
+			"Every generated claim carries an evidence id, and the pipeline verifies each output before rendering.",
 			"Published CLI with XDG paths, mode-aware caching, and Puppeteer PDF output.",
 		],
 		repo: "https://github.com/rwendell/dossier",
@@ -117,7 +117,7 @@ export const projects: Project[] = [
 		category: "Design",
 		tech: ["Lua", "Python", "Design tokens", "Accessibility", "Base16"],
 		highlights: [
-			"WCAG AA+ contrast checked across both light and dark variants.",
+			"Checks WCAG AA+ contrast in both light and dark variants.",
 			"Ports for Neovim, Ghostty, Kitty, Alacritty, WezTerm, and more.",
 			"Color decisions shipped as reusable tokens, not one-off hex values.",
 		],

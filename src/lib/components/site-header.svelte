@@ -119,7 +119,7 @@
 				<Sheet.Content side="right" class="w-72">
 					<Sheet.Header>
 						<Sheet.Title>Menu</Sheet.Title>
-						<Sheet.Description>Navigate the portfolio.</Sheet.Description>
+						<Sheet.Description>Portfolio sections.</Sheet.Description>
 					</Sheet.Header>
 					<nav class="flex flex-col gap-1 px-4" aria-label="Mobile">
 						{#each navItems as item (item.href)}

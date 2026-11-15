@@ -5,7 +5,7 @@ export const site = {
 	location: "Chicago, Illinois",
 	email: "ryanjwendell@gmail.com",
 	summary:
-		"Frontend-focused software engineer with 4+ years building accessible, data-heavy interfaces and the systems behind them. I work in TypeScript, React, and SvelteKit, with a soft spot for design systems, developer tooling, and open source.",
+		"Frontend engineer with 4+ years building accessible, data-heavy interfaces and the systems behind them. I work in TypeScript, React, and SvelteKit, with a soft spot for design systems, developer tooling, and open source.",
 	shortSummary:
 		"I build accessible, data-heavy web apps with TypeScript, React, and SvelteKit — and the tools that make them nicer to ship.",
 	github: "https://github.com/rwendell",
@@ -81,7 +81,7 @@ export const principles = [
 	{
 		icon: "sparkles",
 		title: "UI as a product",
-		body: "I treat UI as a product surface, not a skin. Clear hierarchy, honest states, and interactions that explain themselves.",
+		body: "I treat the interface as part of the product, not a layer on top. Clear hierarchy, honest states, and interactions that explain themselves.",
 	},
 	{
 		icon: "accessibility",

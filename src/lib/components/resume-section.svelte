@@ -11,7 +11,7 @@
 		<SectionHeading
 			eyebrow="Resume"
 			title="The short version."
-			description="One page. Preview it here or take the PDF."
+			description="One page. Preview it below, or download the PDF."
 		/>
 
 		<div class="mt-10 sm:mt-12">

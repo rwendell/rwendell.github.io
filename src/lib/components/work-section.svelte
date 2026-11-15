@@ -12,7 +12,7 @@
 		<SectionHeading
 			eyebrow="Selected work"
 			title="Things I've built, shipped, and maintained."
-			description="Product engineering, developer tooling, and open source. Interfaces and systems that respect the people using them."
+			description="Product engineering, developer tooling, and open source."
 		>
 			{#snippet action()}
 				<Button

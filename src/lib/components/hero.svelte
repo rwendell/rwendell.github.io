@@ -32,26 +32,21 @@
 	<div class="container-page pt-16 pb-20 sm:pt-24 sm:pb-28 lg:pt-28 lg:pb-32">
 		<div class="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
 			<div>
-				<p class="eyebrow">
-					{site.name} · {site.location}
-				</p>
 				<h1
-					class="mt-4 max-w-[17ch] text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-foreground sm:text-6xl lg:text-7xl"
+					class="max-w-[14ch] text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-foreground sm:text-6xl lg:text-7xl"
 				>
-					Interfaces with
-					<span class="font-mono font-medium text-kissa-orange">intent</span>.
+					I'm <span class="text-kissa-orange">Ryan</span>,
 				</h1>
 				<p
 					class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
 				>
-					I'm Ryan, a frontend-focused software engineer in Chicago. I like
-					the seam between design and engineering: where a good interaction,
-					a clean component API, and a reliable data model have to agree.
+					a frontend engineer in Chicago. I build interfaces where the
+					interaction, the component API, and the data model have to agree.
 				</p>
 
 				<div class="mt-8 flex flex-wrap items-center gap-3">
 					<Button href="/#work" size="lg" class="group gap-2">
-						See selected work
+						View work
 						<ArrowDownIcon
 							class="size-4 transition-transform group-hover:translate-y-0.5"
 						/>
