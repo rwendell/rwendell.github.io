@@ -24,6 +24,8 @@
 <article
 	class="group paper-card card-lift flex h-full flex-col overflow-hidden rounded-2xl"
 >
+	<div class={cn("h-1 w-full shrink-0", palette.dot)} aria-hidden="true"></div>
+
 	{#if !textOnly}
 		<div class="p-4 pb-0 sm:p-5 sm:pb-0">
 			<ProjectPreview slug={project.slug} accent={project.accent} />
@@ -33,10 +35,6 @@
 	<div class="flex flex-1 flex-col p-5 sm:p-6">
 		<div class="flex flex-wrap items-center gap-x-2.5 gap-y-1">
 			<span class={cn("eyebrow", palette.text)}>{project.category}</span>
-			<span class="size-1 rounded-full bg-border" aria-hidden="true"></span>
-			<span class="mono-label">{project.year}</span>
-			<span class="size-1 rounded-full bg-border" aria-hidden="true"></span>
-			<span class="mono-label">{project.role}</span>
 			{#if project.org && project.org.toLowerCase() !== project.name.toLowerCase()}
 				<Badge variant="outline" class="ml-auto text-[10px]">
 					{project.org}

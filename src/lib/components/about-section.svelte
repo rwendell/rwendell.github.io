@@ -2,14 +2,12 @@
 	import AccessibilityIcon from "@lucide/svelte/icons/accessibility";
 	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
 	import DatabaseIcon from "@lucide/svelte/icons/database";
-	import DownloadIcon from "@lucide/svelte/icons/download";
 	import GraduationCapIcon from "@lucide/svelte/icons/graduation-cap";
 	import LayoutIcon from "@lucide/svelte/icons/layout";
 	import SparklesIcon from "@lucide/svelte/icons/sparkles";
 	import TerminalIcon from "@lucide/svelte/icons/terminal";
 	import WrenchIcon from "@lucide/svelte/icons/wrench";
 	import SectionHeading from "$lib/components/section-heading.svelte";
-	import { Button } from "$lib/components/ui/button/index.js";
 	import {
 		education,
 		experience,
@@ -35,21 +33,9 @@
 	<div class="container-page">
 		<SectionHeading
 			eyebrow="About"
-			title="Design-minded, delivery-focused."
-			description="I care about accessibility, honest UI states, and tools that make the next person's job easier."
-		>
-			{#snippet action()}
-				<Button
-					variant="outline"
-					href={site.resume.href}
-					download={site.resume.filename}
-					class="gap-2"
-				>
-					<DownloadIcon class="size-4" />
-					Download resume
-				</Button>
-			{/snippet}
-		</SectionHeading>
+			title="How I work."
+			description="Principles, tools, and the places I've shipped."
+		/>
 
 		<div class="mt-12 grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
 			<div>

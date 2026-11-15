@@ -1,4 +1,5 @@
 <script lang="ts" module>
+	import type { CarouselSlide } from "$lib/components/project-carousel.svelte";
 	import type { ProjectAccent } from "$lib/data/projects";
 
 	export const accentStyles: Record<
@@ -78,24 +79,27 @@
 		},
 	];
 
-	const slippiosSlides = [
+	const slippiosSlides: CarouselSlide[] = [
 		{
 			src: "/projects/slippios/menu.png",
 			label: "Menu",
 			width: 1269,
 			height: 786,
+			position: "top",
 		},
 		{
 			src: "/projects/slippios/settings.png",
 			label: "Settings",
 			width: 1261,
 			height: 780,
+			position: "top",
 		},
 		{
 			src: "/projects/slippios/sign-in.png",
 			label: "Sign in",
 			width: 1071,
 			height: 596,
+			position: "top",
 		},
 	];
 
@@ -139,7 +143,7 @@
 
 <div
 	class={cn(
-		"relative isolate min-h-[12.5rem] overflow-hidden rounded-xl border border-border/70 bg-muted/30",
+		"relative isolate min-h-[12.5rem] overflow-hidden rounded-xl bg-muted/30",
 		className
 	)}
 >

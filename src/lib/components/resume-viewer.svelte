@@ -14,7 +14,7 @@
 
 	const views = [
 		{ value: "json", label: "JSON" },
-		{ value: "pdf", label: "resume.pdf" },
+		{ value: "pdf", label: "PDF" },
 	] as const;
 
 	let view = $state<View>("pdf");

@@ -5,7 +5,6 @@
 	import MailIcon from "@lucide/svelte/icons/mail";
 	import MapPinIcon from "@lucide/svelte/icons/map-pin";
 	import { toast } from "svelte-sonner";
-	import BrandIcon from "$lib/components/brand-icon.svelte";
 	import { Button } from "$lib/components/ui/button/index.js";
 	import { site } from "$lib/data/site";
 
@@ -55,8 +54,8 @@
 					<p
 						class="mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
 					>
-						I'm open to frontend and full-stack roles. Email is the fastest
-						way to reach me.
+						Have a role or project in mind? Email is the fastest way to
+						reach me.
 					</p>
 
 					<div class="mt-8 flex flex-wrap items-center gap-3">
@@ -83,40 +82,11 @@
 							{/if}
 						</Button>
 					</div>
-
-					<div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm">
-						<a
-							class="link-arrow text-muted-foreground"
-							href={site.github}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<BrandIcon name="github" class="size-3.5" />
-							GitHub
-							<ArrowUpRightIcon class="size-3" />
-						</a>
-						<a
-							class="link-arrow text-muted-foreground"
-							href={site.linkedin}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<BrandIcon name="linkedin" class="size-3.5" />
-							LinkedIn
-							<ArrowUpRightIcon class="size-3" />
-						</a>
-						<a
-							class="link-arrow text-muted-foreground"
-							href={site.resume.href}
-							download={site.resume.filename}
-						>
-							Resume PDF
-							<ArrowUpRightIcon class="size-3" />
-						</a>
-					</div>
 				</div>
 
-				<div class="rounded-2xl border border-border/60 bg-background/45 p-5 backdrop-blur-sm sm:p-6">
+				<div
+					class="self-start rounded-2xl border border-border/60 bg-background/45 p-5 backdrop-blur-sm sm:p-6"
+				>
 					<div
 						class="flex items-center gap-2 border-b border-border/60 pb-4"
 					>
@@ -141,18 +111,6 @@
 								<dt class="font-medium">Chicago, Illinois</dt>
 								<dd class="text-muted-foreground">
 									Open to remote and Chicago-based roles
-								</dd>
-							</div>
-						</div>
-						<div class="flex items-start gap-3">
-							<MailIcon class="mt-0.5 size-4 text-kissa-teal" />
-							<div>
-								<dt class="font-medium">Email</dt>
-								<dd>
-									<a
-										class="text-muted-foreground transition-colors hover:text-foreground"
-										href={`mailto:${site.email}`}>{site.email}</a
-									>
 								</dd>
 							</div>
 						</div>

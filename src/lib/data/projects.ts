@@ -20,9 +20,7 @@ export interface Project {
 	name: string;
 	tagline: string;
 	description: string;
-	year: string;
 	category: ProjectCategory;
-	role: string;
 	tech: string[];
 	highlights: string[];
 	repo?: string;
@@ -46,9 +44,7 @@ export const projects: Project[] = [
 		tagline: "Dinner decided. Groceries synced.",
 		description:
 			"A multi-user household meal planner that turns shared weekly decisions into a synchronized grocery workflow: a recipe cookbook, real-time weekly planning, leftovers, and shopping lists in one place.",
-		year: "2026",
 		category: "Full-stack",
-		role: "Designer & engineer",
 		tech: [
 			"SvelteKit",
 			"Svelte 5",
@@ -74,9 +70,7 @@ export const projects: Project[] = [
 		tagline: "Grounded resumes, generated from evidence.",
 		description:
 			"A local-first CLI that runs OpenCode agent prompts to turn a career fact bank into tailored resumes, proposals, and application answers — with an evidence trace behind every claim.",
-		year: "2026",
 		category: "Tooling",
-		role: "Designer & engineer",
 		tech: [
 			"TypeScript",
 			"Node.js",
@@ -101,9 +95,7 @@ export const projects: Project[] = [
 		tagline: "shadcn-svelte, without the package-manager prompt.",
 		description:
 			"A small CLI wrapper that makes shadcn-svelte component installs deterministic in aube projects, published on npm.",
-		year: "2026",
 		category: "Tooling",
-		role: "Author",
 		tech: ["JavaScript", "Node.js", "CLI", "shadcn-svelte", "aube", "npm"],
 		highlights: [
 			"Closes the package-manager detection gap in shadcn-svelte's non-interactive add flow.",
@@ -122,9 +114,7 @@ export const projects: Project[] = [
 		tagline: "Espresso, meet accessible color.",
 		description:
 			"A WCAG AA+ color scheme rooted in espresso, with Latte (light) and Macchiato (dark) variants. It ships as a Neovim colorscheme with ports for terminals, and this portfolio runs on its tokens.",
-		year: "2026",
 		category: "Design",
-		role: "Designer & engineer",
 		tech: ["Lua", "Python", "Design tokens", "Accessibility", "Base16"],
 		highlights: [
 			"WCAG AA+ contrast checked across both light and dark variants.",
@@ -141,9 +131,7 @@ export const projects: Project[] = [
 		tagline: "A Melee console on a USB stick.",
 		description:
 			"A bootable Linux image that turns a USB stick into a fullscreen Godot shell for Super Smash Bros. Melee, keeping games, settings, login, and replays on the stick.",
-		year: "2026",
 		category: "Systems",
-		role: "Maintainer",
 		org: "SlippiOS",
 		tech: ["Go", "Nix", "Linux", "UEFI", "Secure Boot", "GDScript"],
 		highlights: [
@@ -161,9 +149,7 @@ export const projects: Project[] = [
 		tagline: "Wallpapers, in your theme.",
 		description:
 			"A Tinted Theming tool that converts wallpapers to a selected Base16/Base24 theme with gowall, so the desktop matches the rest of the theme.",
-		year: "2025 — 2026",
 		category: "Design",
-		role: "Contributor",
 		tech: ["Base16", "Base24", "TOML", "Mustache", "Wallpapers"],
 		highlights: [
 			"Converts wallpapers to a selected Base16/Base24 theme with gowall.",
@@ -171,7 +157,7 @@ export const projects: Project[] = [
 			"Ships theme files and a Tinty item config for one-command use.",
 		],
 		repo: "https://github.com/tinted-theming/tinted-gowall",
-		accent: "purple",
+		accent: "teal",
 		dossierRank: null,
 		textOnly: true,
 	},

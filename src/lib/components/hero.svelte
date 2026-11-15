@@ -52,24 +52,22 @@
 					{site.name} · {site.location}
 				</p>
 				<h1
-					class="mt-4 max-w-[13ch] text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-foreground sm:text-6xl lg:text-7xl"
+					class="mt-4 max-w-[14ch] text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-foreground sm:text-6xl lg:text-7xl"
 				>
-					Interfaces with a little more
-					<span class="font-mono font-medium text-kissa-orange">care</span>.
+					Design-minded.
+					<span class="text-kissa-orange">Delivery-focused.</span>
 				</h1>
 				<p
 					class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
 				>
-					I'm Ryan, a frontend-focused software engineer in Chicago. I spent
-					four years building enterprise features at Northern Trust, and
-					before that security tooling at BluBracket. Outside of work I build
-					the things I wish existed, from a household meal planner to an
-					espresso color scheme.
+					I'm Ryan, a frontend-focused software engineer in Chicago. I like
+					the seam between design and engineering: where a good interaction,
+					a clean component API, and a reliable data model have to agree.
 				</p>
 
 				<div class="mt-8 flex flex-wrap items-center gap-3">
 					<Button href="/#work" size="lg" class="group gap-2">
-						Explore selected work
+						See selected work
 						<ArrowDownIcon
 							class="size-4 transition-transform group-hover:translate-y-0.5"
 						/>
@@ -115,10 +113,7 @@
 						class="h-1 bg-gradient-to-r from-kissa-orange via-kissa-yellow to-kissa-teal"
 					></div>
 					<div class="p-6 sm:p-7">
-						<div class="flex items-center justify-between gap-4">
-							<p class="eyebrow">Now</p>
-							<span class="mono-label">Chicago, IL</span>
-						</div>
+						<p class="eyebrow">Now</p>
 						<p
 							class="mt-5 text-balance text-2xl font-semibold leading-[1.15] tracking-[-0.025em] sm:text-[1.7rem]"
 						>
@@ -126,26 +121,8 @@
 						</p>
 					</div>
 					<div
-						class="grid grid-cols-2 gap-px border-y border-border/60 bg-border/60"
+						class="flex items-center justify-between gap-3 border-t border-border/60 p-4"
 					>
-						<div class="bg-card p-4">
-							<p class="mono-label">Focus</p>
-							<p class="mt-1.5 text-sm font-medium">Frontend + DX</p>
-						</div>
-						<div class="bg-card p-4">
-							<p class="mono-label">Stack</p>
-							<p class="mt-1.5 text-sm font-medium">SvelteKit + React</p>
-						</div>
-						<div class="bg-card p-4">
-							<p class="mono-label">Reading</p>
-							<p class="mt-1.5 text-sm font-medium">Design systems</p>
-						</div>
-						<div class="bg-card p-4">
-							<p class="mono-label">Elsewhere</p>
-							<p class="mt-1.5 text-sm font-medium">Open source</p>
-						</div>
-					</div>
-					<div class="flex items-center justify-between gap-3 p-4">
 						<span class="mono-label">4+ years shipping</span>
 						<div class="flex items-center gap-1.5" aria-hidden="true">
 							{#each palette as color (color)}

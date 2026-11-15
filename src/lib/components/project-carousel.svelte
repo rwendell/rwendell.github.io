@@ -6,6 +6,7 @@
 		label: string;
 		width?: number;
 		height?: number;
+		position?: "center" | "top";
 	}
 
 	interface Props {
@@ -42,7 +43,7 @@
 
 <section
 	class={cn(
-		"relative h-full min-h-0 overflow-hidden rounded-lg border border-border/60 bg-card",
+		"relative h-full min-h-0 overflow-hidden rounded-lg bg-card",
 		className
 	)}
 	aria-label="Project preview"
@@ -58,7 +59,8 @@
 			width={slide.width}
 			height={slide.height}
 			class={cn(
-				"absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-500",
+				"absolute inset-0 h-full w-full object-cover transition-opacity duration-500",
+				slide.position === "top" ? "object-top" : "object-center",
 				slideIndex === index ? "opacity-100" : "opacity-0"
 			)}
 			loading="lazy"

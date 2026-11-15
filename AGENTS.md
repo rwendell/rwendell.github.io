@@ -48,9 +48,12 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 - Keep claims traceable. Do not add metrics, employers, dates, or project scope that is not supported by the dossier data, the resume, or a repository.
 - Organization projects should describe the user's contribution, not imply sole authorship.
 - All projects use the same two-column grid. Meal Planner leads the list.
+- Project cards lead with the category, name, tagline, and content. Year and role were intentionally removed from both the cards and the project data.
+- Every card has a top accent strip. Each project gets its own accent color; do not reuse one across cards.
 - Tinted Gowall is its own project entry with its own repository link. Do not collapse it back into an organization-level Tinted Theming card.
 - Dossier, shadcn-add, and Tinted Gowall are text-only cards. Do not add previews or mockups to them.
 - SlippiOS uses its project mark at `static/projects/slippios/icon.png` and the real menu screenshot at `static/projects/slippios/menu.png`. The card carousel cycles through the menu, settings, and sign-in screens.
+- The hero carries the positioning statement and a short bio; About is `How I work` with principles, toolbox, and experience. Do not add a second bio to About.
 
 ## Project preview assets
 
@@ -60,13 +63,13 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 - `slippios/menu.png`, `settings.png`, and `sign-in.png`: the three screens in the card carousel. `icon.png` is the project mark.
 - `kissa/logo.png`, `latte.png`, and `macchiato.png`: the wordmark and the two Neovim theme screenshots in the carousel.
 
-`ProjectCarousel` auto-advances every five seconds, pauses on hover or focus, and exposes manual dots. Respect `prefers-reduced-motion`: no auto-advance when reduced motion is requested. When replacing a screenshot, keep the same path or update the `src` in `project-preview.svelte`. Preserve the project's own branding; do not replace a real screenshot with a generic mockup when a real one exists.
+`ProjectCarousel` auto-advances every five seconds, pauses on hover or focus, and exposes manual dots. Respect `prefers-reduced-motion`: no auto-advance when reduced motion is requested. SlippiOS slides use `position: "top"` so the menu logo and screen titles stay visible. Preview panels are borderless; do not wrap screenshots in an outline. When replacing a screenshot, keep the same path or update the `src` in `project-preview.svelte`. Preserve the project's own branding; do not replace a real screenshot with a generic mockup when a real one exists.
 
 ## Resume assets
 
-`static/resume/` contains `resume.pdf`, `resume-preview.png`, and `resume.json`. The resume section uses `ResumeViewer`: the `JSON` mode renders the actual `resume.json` with `JsonCode`; the `resume.pdf` mode shows the rendered preview. `site.resume.json` points to the downloadable source, and `site.resume.previewPages` holds the dialog pages.
+`static/resume/` contains `resume.pdf` and `resume-preview.png`. The JSON source lives at `src/lib/data/resume.json` and is imported raw by `resume-json.ts`; it powers the JSON view but is not published as a download. The resume section centers a single `ResumeViewer` with a `JSON` / `PDF` toggle and one download action; do not add a second download link for the JSON source.
 
-Regenerate the PDF with `dossier tailor --generic --no-open --no-prompt --no-preflight --out <dir>`, copy the PDF and the JSON path printed by dossier, and render the preview with `pdftoppm` at 140 DPI. Keep the JSON source and the code-block preview in sync by importing the static file through `src/lib/data/resume-json.ts`.
+Regenerate the PDF with `dossier tailor --generic --no-open --no-prompt --no-preflight --out <dir>`, copy the PDF and the JSON path printed by dossier, then render the preview with `pdftoppm` at 140 DPI. Copy the JSON to `src/lib/data/resume.json` to keep the code-block view in sync.
 
 ## Deployment
 

@@ -16,11 +16,7 @@ export const site = {
 	resume: {
 		href: "/resume/resume.pdf",
 		preview: "/resume/resume-preview.png",
-		previewPages: ["/resume/resume-preview.png"],
-		json: "/resume/resume.json",
 		filename: "resume.pdf",
-		pages: 1,
-		updated: "November 2026",
 	},
 } as const;
 
