@@ -18,7 +18,6 @@ export type ProjectCategory =
 export interface Project {
 	slug: string;
 	name: string;
-	tagline: string;
 	description: string;
 	category: ProjectCategory;
 	tech: string[];
@@ -41,7 +40,6 @@ export const projects: Project[] = [
 	{
 		slug: "meal-planner",
 		name: "Meal Planner",
-		tagline: "Dinner decided. Groceries synced.",
 		description:
 			"A multi-user meal planner for households: a recipe cookbook, a shared week, leftovers, and one grocery list that stays in sync.",
 		category: "Full-stack",
@@ -67,7 +65,6 @@ export const projects: Project[] = [
 	{
 		slug: "dossier",
 		name: "Dossier",
-		tagline: "Grounded resumes, generated from evidence.",
 		description:
 			"A local-first CLI that turns a career fact bank into tailored resumes, proposals, and application answers. Every claim keeps an evidence trail.",
 		category: "Tooling",
@@ -92,7 +89,6 @@ export const projects: Project[] = [
 	{
 		slug: "shadcn-add",
 		name: "shadcn-add",
-		tagline: "shadcn-svelte, without the package-manager prompt.",
 		description:
 			"A small CLI wrapper that makes shadcn-svelte component installs deterministic in aube projects, published on npm.",
 		category: "Tooling",
@@ -111,7 +107,6 @@ export const projects: Project[] = [
 	{
 		slug: "kissa",
 		name: "Kissa",
-		tagline: "An accessible espresso palette.",
 		description:
 			"A WCAG AA+ color scheme rooted in espresso, with Latte (light) and Macchiato (dark) variants. It ships as a Neovim colorscheme with ports for terminals, and this portfolio runs on its tokens.",
 		category: "Design",
@@ -128,7 +123,6 @@ export const projects: Project[] = [
 	{
 		slug: "slippios",
 		name: "SlippiOS",
-		tagline: "A Melee console on a USB stick.",
 		description:
 			"A bootable Linux image that turns a USB stick into a fullscreen Godot shell for Super Smash Bros. Melee, keeping games, settings, login, and replays on the stick.",
 		category: "Systems",
@@ -146,7 +140,6 @@ export const projects: Project[] = [
 	{
 		slug: "tinted-gowall",
 		name: "Tinted Gowall",
-		tagline: "Wallpapers, in your theme.",
 		description:
 			"A Tinted Theming tool that converts wallpapers to a selected Base16/Base24 theme with gowall, so the desktop matches the rest of the theme.",
 		category: "Design",

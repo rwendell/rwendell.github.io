@@ -49,7 +49,7 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 - Keep claims traceable. Do not add metrics, employers, dates, or project scope that is not supported by the dossier data, the resume, or a repository.
 - Organization projects should describe the user's contribution, not imply sole authorship.
 - All projects use the same two-column grid. Meal Planner leads the list.
-- Project cards lead with the category, name, tagline, and content. Year and role were intentionally removed from both the cards and the project data.
+- Project cards lead with the category, name, and content. Year, role, and taglines were intentionally removed from both the cards and the project data.
 - Every card has a top accent strip. Each project gets its own accent color; do not reuse one across cards.
 - Tinted Gowall is its own project entry with its own repository link; the user is its lead developer and maintainer. Do not collapse it back into an organization-level Tinted Theming card.
 - Dossier, shadcn-add, and Tinted Gowall are text-only cards. Do not add previews or mockups to them.

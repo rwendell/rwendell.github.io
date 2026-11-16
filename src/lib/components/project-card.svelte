@@ -43,9 +43,6 @@
 		<h3 class="mt-3 text-xl font-semibold tracking-[-0.02em] text-foreground">
 			{project.name}
 		</h3>
-		<p class="mt-2 text-sm font-medium text-foreground/80">
-			{project.tagline}
-		</p>
 		<p class="mt-3 text-sm leading-relaxed text-muted-foreground">
 			{project.description}
 		</p>
