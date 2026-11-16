@@ -15,7 +15,8 @@ export const site = {
 	upwork: "https://www.upwork.com/freelancers/~01fbe3cf033cea5004",
 	resume: {
 		href: "/resume/resume.pdf",
-		preview: "/resume/resume-preview.png",
+		previewLatte: "/resume/resume-preview-latte.png",
+		previewMacchiato: "/resume/resume-preview-macchiato.png",
 		filename: "resume.pdf",
 	},
 } as const;

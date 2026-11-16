@@ -14,7 +14,10 @@
 		</h2>
 
 		<div class="mt-10 sm:mt-12">
-			<ResumeViewer pdfSrc={site.resume.preview} />
+			<ResumeViewer
+				previewLatte={site.resume.previewLatte}
+				previewMacchiato={site.resume.previewMacchiato}
+			/>
 
 			<div class="mt-6 flex justify-center">
 				<Button

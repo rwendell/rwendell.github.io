@@ -45,14 +45,6 @@ jobs:
             echo "SKIP_BUILD=true" >> "$GITHUB_ENV"
           fi
 
-      - name: Install Poppler
-        if: env.SKIP_BUILD != 'true'
-        run: |
-          if ! command -v pdftoppm >/dev/null 2>&1; then
-            sudo apt-get update
-            sudo apt-get install -y poppler-utils
-          fi
-
       - name: Build resume
         if: env.SKIP_BUILD != 'true'
         run: |
@@ -60,10 +52,16 @@ jobs:
           aube ci
           aube exec --no-install -- puppeteer browsers install chrome
           aube run pdf -- resume
+          aube run render -- resume
 
           cp dist/resume/resume.pdf "$GITHUB_WORKSPACE/static/resume/resume.pdf"
-          pdftoppm -png -r 200 -f 1 -l 1 "$GITHUB_WORKSPACE/static/resume/resume.pdf" /tmp/resume-preview
-          mv /tmp/resume-preview-1.png "$GITHUB_WORKSPACE/static/resume/resume-preview.png"
+          cp "$GITHUB_WORKSPACE/scripts/render-resume-previews.mjs" render-resume-previews.mjs
+          node render-resume-previews.mjs \
+            "$PWD/dist/resume/resume.html" \
+            "$GITHUB_WORKSPACE/src/routes/layout.css" \
+            "$GITHUB_WORKSPACE/static/resume/resume-preview-latte.png" \
+            "$GITHUB_WORKSPACE/static/resume/resume-preview-macchiato.png"
+
           printf '%s\n' "$SOURCE_SHA" > "$GITHUB_WORKSPACE/.resume-source"
 
       - name: Commit resume update
@@ -71,7 +69,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add static/resume/resume.pdf static/resume/resume-preview.png .resume-source
+          git add \
+            static/resume/resume.pdf \
+            static/resume/resume-preview-latte.png \
+            static/resume/resume-preview-macchiato.png \
+            .resume-source
 
           if git diff --cached --quiet; then
             echo "Resume assets are unchanged."
