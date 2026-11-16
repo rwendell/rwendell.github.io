@@ -18,7 +18,7 @@
 			alt="Rendered one-page resume PDF"
 			width="1700"
 			height="2200"
-			class="h-auto w-full"
+			class="resume-preview h-auto w-full"
 			decoding="async"
 		/>
 	</div>

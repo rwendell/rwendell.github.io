@@ -304,6 +304,15 @@
 		box-shadow: var(--shadow-paper);
 	}
 
+	/* The preview shows the opposite scheme; the downloaded PDF stays unchanged. */
+	.resume-preview {
+		filter: invert(1) hue-rotate(180deg);
+	}
+
+	.dark .resume-preview {
+		filter: none;
+	}
+
 	.card-lift {
 		transition:
 			transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
