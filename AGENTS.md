@@ -71,6 +71,8 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 
 `static/resume/` contains `resume.pdf` and `resume-preview.png`. The resume section shows a single `ResumeViewer` with the PDF preview and one download action. Keep the section centered and omit JSON previews and JSON download links.
 
+`.github/workflows/resume-sync.yml` refreshes both files from `rwendell/json-resume` when `src/resume.json` changes. `.resume-source` stores the source blob hash; do not edit it by hand. The sync workflow commits the assets and pushes, which triggers the Pages deploy.
+
 Regenerate the PDF with `dossier tailor --generic --no-open --no-prompt --no-preflight --out <dir>`, copy the PDF, then render the preview with `pdftoppm` at 200 DPI.
 
 ## Deployment

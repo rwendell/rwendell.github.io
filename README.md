@@ -57,6 +57,8 @@ The downloadable resume lives in `static/resume/`:
 
 The resume section shows the rendered PDF preview with a single download action. `site.ts` controls the paths and filename.
 
+`.github/workflows/resume-sync.yml` refreshes `resume.pdf` and `resume-preview.png` when `rwendell/json-resume` changes `src/resume.json`. `.resume-source` stores the source blob hash so unchanged resumes are skipped.
+
 Regenerate the PDF and preview:
 
 ```sh
@@ -90,7 +92,7 @@ Repo-local skills live in `.agents/skills/`:
 
 `.github/workflows/deploy.yml` builds the site and publishes it to GitHub Pages. The repository Pages source must be set to GitHub Actions. The site is a user site, so no base path is needed. `static/.nojekyll` keeps GitHub Pages from running Jekyll over the build. The static adapter emits `404.html`, so unknown paths get the branded error page.
 
-`.github/workflows/ci.yml` runs the type check and build on pull requests and pushes to `main`.
+`.github/workflows/ci.yml` runs the type check and build on pull requests and pushes to `main`. `.github/workflows/resume-sync.yml` updates the hosted resume from `rwendell/json-resume`.
 
 ## Project layout
 
