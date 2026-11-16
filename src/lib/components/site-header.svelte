@@ -21,12 +21,14 @@
 			return;
 		}
 
-		const sections = document.querySelectorAll<HTMLElement>(
-			"main section[id]"
-		);
+		const sections =
+			document.querySelectorAll<HTMLElement>("main section[id]");
 		let current: string | null = null;
 		for (const section of sections) {
-			if (section.getBoundingClientRect().top <= window.innerHeight * 0.4) {
+			if (
+				section.getBoundingClientRect().top <=
+				window.innerHeight * 0.4
+			) {
 				current = section.id;
 			}
 		}
@@ -62,7 +64,7 @@
 					aria-current={active === item.id ? "location" : undefined}
 					class={cn(
 						"relative rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground",
-						active === item.id && "bg-muted/60 text-foreground"
+						active === item.id && "bg-muted/60 text-foreground",
 					)}
 				>
 					{item.label}
@@ -94,19 +96,19 @@
 					{/snippet}
 				</Sheet.Trigger>
 				<Sheet.Content side="right" class="w-72">
-					<Sheet.Header>
-						<Sheet.Title>Menu</Sheet.Title>
-						<Sheet.Description>Portfolio sections.</Sheet.Description>
-					</Sheet.Header>
+					<Sheet.Header />
 					<nav class="flex flex-col gap-1 px-4" aria-label="Mobile">
 						{#each navItems as item (item.href)}
 							<a
 								href={item.href}
 								onclick={() => (open = false)}
-								aria-current={active === item.id ? "location" : undefined}
+								aria-current={active === item.id
+									? "location"
+									: undefined}
 								class={cn(
 									"rounded-md px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground",
-									active === item.id && "bg-muted/60 text-foreground"
+									active === item.id &&
+										"bg-muted/60 text-foreground",
 								)}
 							>
 								{item.label}
@@ -118,7 +120,10 @@
 		</div>
 	</div>
 
-	<div class="absolute inset-x-0 bottom-0 h-px bg-border/40" aria-hidden="true">
+	<div
+		class="absolute inset-x-0 bottom-0 h-px bg-border/40"
+		aria-hidden="true"
+	>
 		<div
 			class="h-full origin-left bg-gradient-to-r from-kissa-orange via-kissa-yellow to-kissa-teal"
 			style:transform={`scaleX(${progress})`}
