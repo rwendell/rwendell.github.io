@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: resume-sync
@@ -73,3 +74,10 @@ jobs:
           git commit -m "Update hosted resume from json-resume@${SOURCE_SHA}"
           git pull --rebase origin main
           git push
+          echo "CHANGED=true" >> "$GITHUB_ENV"
+
+      - name: Deploy updated site
+        if: env.CHANGED == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

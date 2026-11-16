@@ -57,7 +57,7 @@ The downloadable resume lives in `static/resume/`:
 
 The resume section shows the rendered PDF preview with a single download action. `site.ts` controls the paths and filename.
 
-`.github/workflows/resume-sync.yml` refreshes `resume.pdf` and `resume-preview.png` when `rwendell/json-resume` changes `src/resume.json`. `.resume-source` stores the source blob hash so unchanged resumes are skipped.
+`.github/workflows/resume-sync.yml` refreshes `resume.pdf` and `resume-preview.png` when `rwendell/json-resume` changes `src/resume.json`. `.resume-source` stores the source blob hash so unchanged resumes are skipped. A changed resume is committed and the Pages deploy is dispatched explicitly, since pushes made with `GITHUB_TOKEN` do not trigger other workflows.
 
 Regenerate the PDF and preview:
 
