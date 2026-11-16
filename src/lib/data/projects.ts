@@ -82,6 +82,7 @@ export const projects: Project[] = [
 			"Ships as a CLI with XDG paths, mode-aware caching, and Puppeteer PDF output.",
 		],
 		repo: "https://github.com/rwendell/dossier",
+		npm: "https://www.npmjs.com/package/@rwendell/dossier",
 		accent: "purple",
 		dossierRank: 1,
 		textOnly: true,
