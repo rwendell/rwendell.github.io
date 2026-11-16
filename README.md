@@ -12,7 +12,7 @@ Live at [rwendell.github.io](https://rwendell.github.io).
 - `mode-watcher` for light, dark, and system appearance
 - Kissa palette: Latte for light mode, Macchiato for dark mode
 - Instrument Sans and Monaspace Neon from Fontsource
-- Lucide for interface icons and Simple Icons for the GitHub and LinkedIn brand marks
+- Lucide for interface icons and Simple Icons for the GitHub, LinkedIn, and Upwork brand marks
 - aube for package management
 
 ## Local development

@@ -37,7 +37,7 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 - `src/routes/layout.css` owns the Kissa tokens. Light mode is Latte; `.dark` is Macchiato.
 - Do not add `dark:` overrides for color. Use semantic tokens so both variants stay in sync.
 - Fonts: Instrument Sans for UI, Monaspace Neon for mono accents. The CSS stack includes MonoLisa first for local installations, but MonoLisa is commercial and must not be bundled or redistributed.
-- Icons: use `@lucide/svelte` for interface icons. GitHub and LinkedIn brand marks come from `simple-icons` through `$lib/components/brand-icon.svelte`; do not hand-draw brand paths. `simple-icons` is pinned to 13.x because later releases no longer ship the LinkedIn mark.
+- Icons: use `@lucide/svelte` for interface icons. GitHub, LinkedIn, and Upwork brand marks come from `simple-icons` through `$lib/components/brand-icon.svelte`; do not hand-draw brand paths. `simple-icons` is pinned to 13.x because later releases no longer ship the LinkedIn mark.
 - Keep the warm, paper-like surface treatment: `paper-card`, `card-lift`, `eyebrow`, `mono-label`, `hairline`, `kissa-rule`.
 - Use the faded neutral hexagon pattern as the background motif. Do not add colored glow or bloom gradients.
 - Respect `prefers-reduced-motion`. Avoid motion that is required to understand content.
@@ -54,7 +54,8 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 - Tinted Gowall is its own project entry with its own repository link; the user is its lead developer and maintainer. Do not collapse it back into an organization-level Tinted Theming card.
 - Dossier, shadcn-add, and Tinted Gowall are text-only cards. Do not add previews or mockups to them.
 - SlippiOS uses its project mark at `static/projects/slippios/icon.png` and the real menu screenshot at `static/projects/slippios/menu.png`. The card carousel cycles through the menu, settings, and sign-in screens.
-- The hero is the single about section: positioning, bio, and toolbox. There is no separate About section; career history lives in the resume. Do not add a second bio or experience timeline.
+- The hero is the single about section: positioning, bio, toolbox, and profile links (GitHub, LinkedIn, Upwork). There is no separate About section; career history lives in the resume. Do not add a second bio or experience timeline.
+- Contact holds direct contact options (email and LinkedIn). The footer is copyright only; do not add a second profile or section-link row.
 
 ## Project preview assets
 

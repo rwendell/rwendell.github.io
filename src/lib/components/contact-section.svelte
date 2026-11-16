@@ -16,14 +16,11 @@
 			<div
 				class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"
 			>
-				<div>
-					<p class="eyebrow">Contact</p>
-					<h2
-						class="mt-3 text-balance text-2xl font-semibold tracking-[-0.02em] sm:text-3xl"
-					>
-						Email works best.
-					</h2>
-				</div>
+				<h2
+					class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl"
+				>
+					Contact
+				</h2>
 
 				<div class="flex flex-wrap gap-3">
 					<Button size="lg" href={`mailto:${site.email}`} class="gap-2">

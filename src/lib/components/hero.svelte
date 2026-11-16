@@ -1,13 +1,10 @@
 <script lang="ts">
-	import ArrowDownIcon from "@lucide/svelte/icons/arrow-down";
 	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
 	import DatabaseIcon from "@lucide/svelte/icons/database";
-	import FileTextIcon from "@lucide/svelte/icons/file-text";
 	import LayoutIcon from "@lucide/svelte/icons/layout";
 	import TerminalIcon from "@lucide/svelte/icons/terminal";
 	import BrandIcon from "$lib/components/brand-icon.svelte";
 	import HexPattern from "$lib/components/hex-pattern.svelte";
-	import { Button } from "$lib/components/ui/button/index.js";
 	import { site, skillGroups } from "$lib/data/site";
 
 	const skillIcons = {
@@ -37,19 +34,6 @@
 					with clear boundaries, and docs that answer questions.
 				</p>
 
-				<div class="mt-8 flex flex-wrap items-center gap-3">
-					<Button href="/#work" size="lg" class="group gap-2">
-						View work
-						<ArrowDownIcon
-							class="size-4 transition-transform group-hover:translate-y-0.5"
-						/>
-					</Button>
-					<Button href="/#resume" variant="outline" size="lg" class="gap-2">
-						<FileTextIcon class="size-4" />
-						View resume
-					</Button>
-				</div>
-
 				<div class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
 					<a
 						href={site.github}
@@ -69,6 +53,16 @@
 					>
 						<BrandIcon name="linkedin" class="size-3.5" />
 						linkedin.com/in/{site.linkedinHandle}
+						<ArrowUpRightIcon class="size-3" />
+					</a>
+					<a
+						href={site.upwork}
+						target="_blank"
+						rel="noreferrer"
+						class="link-arrow text-muted-foreground"
+					>
+						<BrandIcon name="upwork" class="size-3.5" />
+						Upwork
 						<ArrowUpRightIcon class="size-3" />
 					</a>
 				</div>
