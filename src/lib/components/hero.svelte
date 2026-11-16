@@ -1,23 +1,14 @@
 <script lang="ts">
-	import AccessibilityIcon from "@lucide/svelte/icons/accessibility";
 	import ArrowDownIcon from "@lucide/svelte/icons/arrow-down";
 	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
 	import DatabaseIcon from "@lucide/svelte/icons/database";
 	import FileTextIcon from "@lucide/svelte/icons/file-text";
 	import LayoutIcon from "@lucide/svelte/icons/layout";
-	import SparklesIcon from "@lucide/svelte/icons/sparkles";
 	import TerminalIcon from "@lucide/svelte/icons/terminal";
-	import WrenchIcon from "@lucide/svelte/icons/wrench";
 	import BrandIcon from "$lib/components/brand-icon.svelte";
 	import HexPattern from "$lib/components/hex-pattern.svelte";
 	import { Button } from "$lib/components/ui/button/index.js";
-	import { principles, site, skillGroups } from "$lib/data/site";
-
-	const principleIcons = {
-		sparkles: SparklesIcon,
-		accessibility: AccessibilityIcon,
-		wrench: WrenchIcon,
-	};
+	import { site, skillGroups } from "$lib/data/site";
 
 	const skillIcons = {
 		layout: LayoutIcon,
@@ -40,8 +31,10 @@
 				<p
 					class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
 				>
-					a frontend engineer in Chicago. I build interfaces where the
-					interaction, the component API, and the data model have to agree.
+					a frontend engineer in Chicago. I build interfaces that are part of
+					the product, not a layer added at the end, and I make sure they work
+					by keyboard as well as mouse. I care about clear types, components
+					with clear boundaries, and docs that answer questions.
 				</p>
 
 				<div class="mt-8 flex flex-wrap items-center gap-3">
@@ -116,29 +109,6 @@
 			</div>
 		</div>
 
-		<div class="mt-16">
-			<p class="eyebrow">How I work</p>
-			<div class="mt-4 grid gap-4 sm:grid-cols-3">
-				{#each principles as principle (principle.title)}
-					{@const Icon = principleIcons[principle.icon]}
-					<div
-						class="rounded-xl border border-border/60 bg-card/40 p-4 backdrop-blur-sm"
-					>
-						<span
-							class="grid size-8 place-items-center rounded-lg bg-kissa-orange/10 text-kissa-orange"
-						>
-							<Icon class="size-4" />
-						</span>
-						<h2 class="mt-3 text-sm font-semibold tracking-tight">
-							{principle.title}
-						</h2>
-						<p class="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-							{principle.body}
-						</p>
-					</div>
-				{/each}
-			</div>
-		</div>
 	</div>
 
 	<div class="kissa-rule container-page" aria-hidden="true"></div>

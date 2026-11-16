@@ -57,7 +57,7 @@ export const projects: Project[] = [
 		highlights: [
 			"Real-time SvelteKit + Convex app with Google OAuth2, household onboarding, and shared planning.",
 			"Weekly plans, leftover tracking, and shopping lists stay in sync across the household.",
-			"Mobile-first interface built with Svelte 5, Tailwind, and shadcn-svelte components.",
+			"Mobile-first interface using Svelte 5, Tailwind, and shadcn-svelte components.",
 		],
 		repo: "https://github.com/rwendell/meal-planner",
 		live: "https://meal-planner-two-dun-14.vercel.app",
@@ -69,7 +69,7 @@ export const projects: Project[] = [
 		name: "Dossier",
 		tagline: "Grounded resumes, generated from evidence.",
 		description:
-			"A local-first CLI that runs OpenCode agent prompts to turn a career fact bank into tailored resumes, proposals, and application answers — with an evidence trace behind every claim.",
+			"A local-first CLI that turns a career fact bank into tailored resumes, proposals, and application answers. Every claim keeps an evidence trail.",
 		category: "Tooling",
 		tech: [
 			"TypeScript",
@@ -82,7 +82,7 @@ export const projects: Project[] = [
 		highlights: [
 			"Agent pipeline generates resumes, proposals, and answers from a local career fact bank.",
 			"Every generated claim carries an evidence id, and the pipeline verifies each output before rendering.",
-			"Published CLI with XDG paths, mode-aware caching, and Puppeteer PDF output.",
+			"Ships as a CLI with XDG paths, mode-aware caching, and Puppeteer PDF output.",
 		],
 		repo: "https://github.com/rwendell/dossier",
 		accent: "purple",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
 	{
 		slug: "kissa",
 		name: "Kissa",
-		tagline: "Espresso, meet accessible color.",
+		tagline: "An accessible espresso palette.",
 		description:
 			"A WCAG AA+ color scheme rooted in espresso, with Latte (light) and Macchiato (dark) variants. It ships as a Neovim colorscheme with ports for terminals, and this portfolio runs on its tokens.",
 		category: "Design",
@@ -119,7 +119,7 @@ export const projects: Project[] = [
 		highlights: [
 			"Checks WCAG AA+ contrast in both light and dark variants.",
 			"Ports for Neovim, Ghostty, Kitty, Alacritty, WezTerm, and more.",
-			"Color decisions shipped as reusable tokens, not one-off hex values.",
+			"Uses reusable tokens instead of one-off hex values.",
 		],
 		repo: "https://github.com/rwendell/kissa",
 		accent: "pink",

@@ -7,7 +7,7 @@ export const site = {
 	summary:
 		"Frontend engineer with 4+ years building accessible, data-heavy interfaces and the systems behind them. I work in TypeScript, React, and SvelteKit, with a soft spot for design systems, developer tooling, and open source.",
 	shortSummary:
-		"I build accessible, data-heavy web apps with TypeScript, React, and SvelteKit — and the tools that make them nicer to ship.",
+		"I build accessible, data-heavy web apps with TypeScript, React, and SvelteKit.",
 	github: "https://github.com/rwendell",
 	githubHandle: "rwendell",
 	linkedin: "https://www.linkedin.com/in/rjwendell/",
@@ -74,23 +74,5 @@ export const skillGroups = [
 			"Python",
 			"AI agents",
 		],
-	},
-] as const;
-
-export const principles = [
-	{
-		icon: "sparkles",
-		title: "UI as a product",
-		body: "I treat the interface as part of the product, not a layer on top. Clear hierarchy, honest states, and interactions that explain themselves.",
-	},
-	{
-		icon: "accessibility",
-		title: "Accessible by default",
-		body: "Keyboard paths, focus management, contrast, and semantics are part of the build — not a cleanup pass at the end.",
-	},
-	{
-		icon: "wrench",
-		title: "Good tools, good teams",
-		body: "I like removing friction: typed boundaries, reliable components, fast feedback loops, and docs that answer the next question.",
 	},
 ] as const;

@@ -34,10 +34,10 @@ aube run preview
 
 ## Content
 
-- `src/lib/data/site.ts` owns the profile, skills, principles, and resume metadata.
+- `src/lib/data/site.ts` owns the profile, skills, and resume metadata.
 - `src/lib/data/projects.ts` owns the project cards. All six projects use the same two-column grid.
 - Project facts came from the dossier career fact bank and public GitHub repositories and organization projects.
-- The section heading's "More on GitHub" button links to the public profile instead of listing low-signal repositories.
+- The Work section's "More on GitHub" button links to the public profile instead of listing low-signal repositories.
 - shadcn-add is published on npm as `shadcn-add` and links to both the package and its GitHub repository.
 - Tinted Gowall is listed as its own project with its own repository link; the user is its lead developer and maintainer.
 - Project previews are used only where they add context: Meal Planner, Kissa, and SlippiOS. Dossier, shadcn-add, and Tinted Gowall are text-only cards.
@@ -98,7 +98,7 @@ Repo-local skills live in `.agents/skills/`:
 src/
   lib/
     components/      page sections, shared UI, shadcn components
-    data/            site, project, principle, and skill content
+    data/            site, project, and skill content
   routes/
     +layout.svelte   shell, SEO, theme watcher, header, footer
     +page.svelte     single-page portfolio

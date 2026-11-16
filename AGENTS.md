@@ -44,7 +44,7 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 
 ## Content
 
-- `src/lib/data/site.ts`: profile, summary, skills, principles, resume metadata.
+- `src/lib/data/site.ts`: profile, summary, skills, resume metadata.
 - `src/lib/data/projects.ts`: project order, descriptions, highlights, links, and dossier ranks. Display order is frontend-weighted; preserve the `dossierRank` values when editing.
 - Keep claims traceable. Do not add metrics, employers, dates, or project scope that is not supported by the dossier data, the resume, or a repository.
 - Organization projects should describe the user's contribution, not imply sole authorship.
@@ -54,7 +54,7 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 - Tinted Gowall is its own project entry with its own repository link; the user is its lead developer and maintainer. Do not collapse it back into an organization-level Tinted Theming card.
 - Dossier, shadcn-add, and Tinted Gowall are text-only cards. Do not add previews or mockups to them.
 - SlippiOS uses its project mark at `static/projects/slippios/icon.png` and the real menu screenshot at `static/projects/slippios/menu.png`. The card carousel cycles through the menu, settings, and sign-in screens.
-- The hero is the single about section: positioning, bio, toolbox, and principles. There is no separate About section; career history lives in the resume. Do not add a second bio or experience timeline.
+- The hero is the single about section: positioning, bio, and toolbox. There is no separate About section; career history lives in the resume. Do not add a second bio or experience timeline.
 
 ## Project preview assets
 

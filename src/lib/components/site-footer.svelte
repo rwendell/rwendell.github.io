@@ -6,14 +6,12 @@
 	const year = new Date().getFullYear();
 </script>
 
-<footer class="mt-24 border-t border-border/60">
-	<div class="container-page py-10 sm:py-12">
-		<div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
-			<a href="#top" class="text-sm font-semibold tracking-tight">
-				{site.name}
-			</a>
+<footer class="mt-10 border-t border-border/60">
+	<div class="container-page py-6">
+		<div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+			<p class="text-sm text-muted-foreground">© {site.name} {year}</p>
 
-			<div class="flex flex-col gap-2 text-sm">
+			<div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
 				<a
 					class="inline-flex items-center gap-2 text-muted-foreground transition-colors hover:text-foreground"
 					href={site.github}
@@ -46,9 +44,5 @@
 				</a>
 			</div>
 		</div>
-
-		<p class="mt-10 border-t border-border/50 pt-6 text-xs text-muted-foreground">
-			© {year} {site.name}.
-		</p>
 	</div>
 </footer>
