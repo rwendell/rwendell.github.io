@@ -14,10 +14,10 @@ export const site = {
 	linkedinHandle: "rjwendell",
 	upwork: "https://www.upwork.com/freelancers/~01fbe3cf033cea5004",
 	resume: {
-		href: "/resume/resume.pdf",
-		previewLatte: "/resume/resume-preview-latte.png",
-		previewMacchiato: "/resume/resume-preview-macchiato.png",
-		filename: "resume.pdf",
+		href: "/resume/RyanWendell-Resume.pdf",
+		previewLatte: "/resume/RyanWendell-Resume-Latte.png",
+		previewMacchiato: "/resume/RyanWendell-Resume-Macchiato.png",
+		filename: "RyanWendell-Resume.pdf",
 	},
 } as const;
 

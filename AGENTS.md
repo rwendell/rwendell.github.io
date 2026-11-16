@@ -69,9 +69,9 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 
 ## Resume assets
 
-`static/resume/` contains `resume.pdf`, `resume-preview-latte.png`, and `resume-preview-macchiato.png`. The resume section shows a single `ResumeViewer` with the opposite preview: Macchiato in light mode, Latte in dark mode. The downloaded PDF remains the normal light version. Keep the section centered and omit JSON previews and JSON download links.
+`static/resume/` contains `RyanWendell-Resume.pdf`, `RyanWendell-Resume-Latte.png`, and `RyanWendell-Resume-Macchiato.png`. The resume section shows a single `ResumeViewer` with the opposite preview: Macchiato in light mode, Latte in dark mode. The downloaded PDF remains the normal light version. Keep the section centered and omit JSON previews and JSON download links.
 
-`.github/workflows/resume-sync.yml` refreshes the PDF and both previews from `rwendell/json-resume` when `src/resume.json` changes. `.resume-source` stores the source blob hash; do not edit it by hand. The sync workflow commits the assets and dispatches the Pages deploy explicitly, since `GITHUB_TOKEN` pushes do not trigger other workflows.
+`.github/workflows/resume-sync.yml` refreshes the PDF and both previews from `rwendell/json-resume` when `src/RyanWendell-Resume.json` changes, falling back to `src/resume.json`. `.resume-source` stores the source blob hash; do not edit it by hand. The sync workflow commits the assets and dispatches the Pages deploy explicitly, since `GITHUB_TOKEN` pushes do not trigger other workflows.
 
 `scripts/render-resume-previews.mjs` renders both previews from the json-resume HTML. It reads `--background`, `--foreground`, `--muted-foreground`, and `--ring` from `src/routes/layout.css`; do not hardcode Kissa hex values in the script. To force a refresh, run `gh workflow run resume-sync.yml -f force=true`.
 

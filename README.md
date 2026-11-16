@@ -52,13 +52,13 @@ aube run preview
 
 The downloadable resume lives in `static/resume/`:
 
-- `resume.pdf`: the one-page PDF from `rwendell/json-resume`
-- `resume-preview-latte.png`: Latte-themed preview, shown in dark mode
-- `resume-preview-macchiato.png`: Macchiato-themed preview, shown in light mode
+- `RyanWendell-Resume.pdf`: the one-page PDF from `rwendell/json-resume`
+- `RyanWendell-Resume-Latte.png`: Latte-themed preview, shown in dark mode
+- `RyanWendell-Resume-Macchiato.png`: Macchiato-themed preview, shown in light mode
 
 The resume section shows the opposite color scheme from the page; the downloaded PDF remains the normal light version. `site.ts` controls the paths and filename.
 
-`.github/workflows/resume-sync.yml` refreshes the PDF and both previews when `rwendell/json-resume` changes `src/resume.json`. `.resume-source` stores the source blob hash so unchanged resumes are skipped. A changed resume is committed and the Pages deploy is dispatched explicitly, since pushes made with `GITHUB_TOKEN` do not trigger other workflows.
+`.github/workflows/resume-sync.yml` refreshes the PDF and both previews when `rwendell/json-resume` changes `src/RyanWendell-Resume.json` (falling back to `src/resume.json`). `.resume-source` stores the source blob hash so unchanged resumes are skipped. A changed resume is committed and the Pages deploy is dispatched explicitly, since pushes made with `GITHUB_TOKEN` do not trigger other workflows.
 
 The previews are rendered from the json-resume HTML by `scripts/render-resume-previews.mjs`. The script reads the shadcn semantic tokens in `src/routes/layout.css` (`--background`, `--foreground`, `--muted-foreground`, `--ring`) rather than hardcoding colors. To force a refresh:
 
