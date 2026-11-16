@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-	<title>{site.name} — {site.role}</title>
+	<title>{site.name}</title>
 	<meta name="description" content={site.summary} />
 	<meta name="author" content={site.name} />
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -23,7 +23,7 @@
 	<link rel="canonical" href={site.url} />
 
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content={`${site.name} — ${site.role}`} />
+	<meta property="og:title" content={site.name} />
 	<meta property="og:description" content={site.shortSummary} />
 	<meta property="og:url" content={site.url} />
 	<meta property="og:image" content={`${site.url}/og.png`} />
@@ -33,7 +33,7 @@
 	<meta property="og:site_name" content={site.name} />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={`${site.name} — ${site.role}`} />
+	<meta name="twitter:title" content={site.name} />
 	<meta name="twitter:description" content={site.shortSummary} />
 	<meta name="twitter:image" content={`${site.url}/og.png`} />
 	<meta name="twitter:image:alt" content={`${site.name} — ${site.role}`} />
