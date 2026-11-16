@@ -1,6 +1,6 @@
 export const site = {
 	name: "Ryan Wendell",
-	role: "Frontend Software Engineer",
+	role: "Frontend Engineer",
 	url: "https://rwendell.github.io",
 	location: "Chicago, Illinois",
 	email: "ryanjwendell@gmail.com",

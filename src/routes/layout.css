@@ -204,17 +204,6 @@
 	body {
 		@apply bg-background text-foreground antialiased;
 		min-width: 320px;
-		background-image:
-			radial-gradient(
-				ellipse 80% 55% at 8% -8%,
-				color-mix(in srgb, var(--kissa-orange) 11%, transparent),
-				transparent 70%
-			),
-			radial-gradient(
-				ellipse 65% 45% at 92% 2%,
-				color-mix(in srgb, var(--kissa-teal) 9%, transparent),
-				transparent 68%
-			);
 	}
 
 	::selection {
