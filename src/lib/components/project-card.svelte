@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BrandIcon from "$lib/components/brand-icon.svelte";
 	import ProjectPreview, {
 		accentStyles,
 	} from "$lib/components/project-preview.svelte";
@@ -93,12 +94,13 @@
 			{/if}
 			{#if project.npm}
 				<a
-					class="link-arrow text-sm"
+					class="link-arrow link-underline text-sm"
 					href={project.npm}
 					target="_blank"
 					rel="noreferrer"
 					aria-label={`${project.name} on npm`}
 				>
+					<BrandIcon name="npm" class="size-3.5" />
 					npm
 				</a>
 			{/if}

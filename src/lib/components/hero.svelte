@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
 	import DatabaseIcon from "@lucide/svelte/icons/database";
 	import LayoutIcon from "@lucide/svelte/icons/layout";
 	import TerminalIcon from "@lucide/svelte/icons/terminal";
@@ -39,31 +38,28 @@
 						href={site.github}
 						target="_blank"
 						rel="noreferrer"
-						class="link-arrow text-muted-foreground"
+						class="link-arrow link-underline text-muted-foreground"
 					>
 						<BrandIcon name="github" class="size-3.5" />
 						github.com/{site.githubHandle}
-						<ArrowUpRightIcon class="size-3" />
 					</a>
 					<a
 						href={site.linkedin}
 						target="_blank"
 						rel="noreferrer"
-						class="link-arrow text-muted-foreground"
+						class="link-arrow link-underline text-muted-foreground"
 					>
 						<BrandIcon name="linkedin" class="size-3.5" />
 						linkedin.com/in/{site.linkedinHandle}
-						<ArrowUpRightIcon class="size-3" />
 					</a>
 					<a
 						href={site.upwork}
 						target="_blank"
 						rel="noreferrer"
-						class="link-arrow text-muted-foreground"
+						class="link-arrow link-underline text-muted-foreground"
 					>
 						<BrandIcon name="upwork" class="size-3.5" />
 						Upwork
-						<ArrowUpRightIcon class="size-3" />
 					</a>
 				</div>
 			</div>
