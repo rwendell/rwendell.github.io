@@ -1,9 +1,7 @@
 <script lang="ts">
-	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
 	import CoffeeIcon from "@lucide/svelte/icons/coffee";
 	import MenuIcon from "@lucide/svelte/icons/menu";
 	import { onMount } from "svelte";
-	import BrandIcon from "$lib/components/brand-icon.svelte";
 	import ModeToggle from "$lib/components/mode-toggle.svelte";
 	import { Button } from "$lib/components/ui/button/index.js";
 	import * as Sheet from "$lib/components/ui/sheet/index.js";
@@ -47,11 +45,13 @@
 <header
 	class="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/65"
 >
-	<div class="container-page flex h-16 items-center justify-between gap-4">
+	<div
+		class="container-page grid h-16 grid-cols-[auto_1fr_auto] items-center gap-4 md:grid-cols-[1fr_auto_1fr]"
+	>
 		<a
-			href="/"
-			class="group flex shrink-0 items-center gap-2.5"
-			aria-label="Ryan Wendell — back to top"
+			href="/#top"
+			class="group flex items-center gap-2.5 justify-self-start"
+			aria-label={`${site.name} — back to top`}
 		>
 			<span
 				class="grid size-8 place-items-center rounded-lg border border-border/70 bg-card/70 text-kissa-orange shadow-xs transition-colors group-hover:border-kissa-orange/45"
@@ -59,7 +59,7 @@
 				<CoffeeIcon class="size-4" />
 			</span>
 			<span class="flex flex-col leading-none">
-				<span class="text-sm font-semibold tracking-tight">Ryan Wendell</span>
+				<span class="text-sm font-semibold tracking-tight">{site.name}</span>
 				<span
 					class="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-muted-foreground"
 					>frontend engineer</span
@@ -67,7 +67,10 @@
 			</span>
 		</a>
 
-		<nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
+		<nav
+			class="hidden items-center gap-1 justify-self-center md:flex"
+			aria-label="Primary"
+		>
 			{#each navItems as item (item.href)}
 				<a
 					href={item.href}
@@ -88,19 +91,8 @@
 			{/each}
 		</nav>
 
-		<div class="flex items-center gap-1">
+		<div class="flex items-center gap-1 justify-self-end">
 			<ModeToggle />
-			<Button
-				variant="ghost"
-				size="icon"
-				class="hidden text-muted-foreground hover:text-foreground sm:inline-flex"
-				href={site.github}
-				target="_blank"
-				rel="noreferrer"
-				aria-label="GitHub profile"
-			>
-				<BrandIcon name="github" class="size-4" />
-			</Button>
 
 			<Sheet.Root bind:open>
 				<Sheet.Trigger>
@@ -126,30 +118,16 @@
 							<a
 								href={item.href}
 								onclick={() => (open = false)}
-								class="rounded-md px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
+								aria-current={active === item.id ? "location" : undefined}
+								class={cn(
+									"rounded-md px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground",
+									active === item.id && "bg-muted/60 text-foreground"
+								)}
 							>
 								{item.label}
 							</a>
 						{/each}
 					</nav>
-					<Sheet.Footer class="flex-col items-stretch gap-2">
-						<Button
-							variant="outline"
-							href={site.github}
-							target="_blank"
-							rel="noreferrer"
-							class="justify-between"
-						>
-							<span class="inline-flex items-center gap-2">
-								<BrandIcon name="github" class="size-4" />
-								GitHub
-							</span>
-							<ArrowUpRightIcon class="size-3.5" />
-						</Button>
-						<p class="mono-label px-1 text-center">
-							{site.location}
-						</p>
-					</Sheet.Footer>
 				</Sheet.Content>
 			</Sheet.Root>
 		</div>
