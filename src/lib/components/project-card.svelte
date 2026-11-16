@@ -1,6 +1,4 @@
 <script lang="ts">
-	import ArrowUpRightIcon from "@lucide/svelte/icons/arrow-up-right";
-	import BrandIcon from "$lib/components/brand-icon.svelte";
 	import ProjectPreview, {
 		accentStyles,
 	} from "$lib/components/project-preview.svelte";
@@ -80,7 +78,6 @@
 					aria-label={`${project.name} source on GitHub`}
 				>
 					Source
-					<ArrowUpRightIcon class="size-3.5" />
 				</a>
 			{/if}
 			{#if project.live}
@@ -92,7 +89,6 @@
 					aria-label={`Open the ${project.name} live site`}
 				>
 					Live site
-					<ArrowUpRightIcon class="size-3.5" />
 				</a>
 			{/if}
 			{#if project.npm}
@@ -103,7 +99,6 @@
 					rel="noreferrer"
 					aria-label={`${project.name} on npm`}
 				>
-					<BrandIcon name="npm" class="size-3.5" />
 					npm
 				</a>
 			{/if}

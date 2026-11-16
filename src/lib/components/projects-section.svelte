@@ -6,13 +6,13 @@
 	import { site } from "$lib/data/site";
 </script>
 
-<section id="work" class="scroll-mt-24 py-20 sm:py-28">
+<section id="projects" class="scroll-mt-24 py-20 sm:py-28">
 	<div class="container-page">
 		<div class="flex flex-wrap items-end justify-between gap-4">
 			<h2
 				class="text-3xl font-semibold tracking-[-0.03em] text-foreground sm:text-4xl"
 			>
-				Highlighted work
+				Projects
 			</h2>
 			<Button
 				variant="outline"
