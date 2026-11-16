@@ -1,5 +1,4 @@
 <script lang="ts">
-	import CoffeeIcon from "@lucide/svelte/icons/coffee";
 	import MenuIcon from "@lucide/svelte/icons/menu";
 	import { onMount } from "svelte";
 	import ModeToggle from "$lib/components/mode-toggle.svelte";
@@ -47,21 +46,10 @@
 	>
 		<a
 			href="/#top"
-			class="group flex items-center gap-2.5 justify-self-start"
+			class="justify-self-start text-sm font-semibold tracking-tight"
 			aria-label={`${site.name} — back to top`}
 		>
-			<span
-				class="grid size-8 place-items-center rounded-lg border border-border/70 bg-card/70 text-kissa-orange shadow-xs transition-colors group-hover:border-kissa-orange/45"
-			>
-				<CoffeeIcon class="size-4" />
-			</span>
-			<span class="flex flex-col leading-none">
-				<span class="text-sm font-semibold tracking-tight">{site.name}</span>
-				<span
-					class="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-muted-foreground"
-					>frontend engineer</span
-				>
-			</span>
+			{site.name}
 		</a>
 
 		<nav
