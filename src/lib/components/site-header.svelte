@@ -16,28 +16,25 @@
 		const root = document.documentElement;
 		const max = root.scrollHeight - window.innerHeight;
 		progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+
+		if (max > 0 && window.scrollY >= max - 2) {
+			active = "contact";
+			return;
+		}
+
+		const sections = document.querySelectorAll<HTMLElement>(
+			"main section[id]"
+		);
+		let current: string | null = null;
+		for (const section of sections) {
+			if (section.getBoundingClientRect().top <= window.innerHeight * 0.4) {
+				current = section.id;
+			}
+		}
+		active = current;
 	}
 
-	onMount(() => {
-		updateProgress();
-
-		const sections = Array.from(
-			document.querySelectorAll<HTMLElement>("main section[id]")
-		);
-		if (sections.length === 0) return;
-
-		const observer = new IntersectionObserver(
-			(entries) => {
-				for (const entry of entries) {
-					if (entry.isIntersecting) active = entry.target.id;
-				}
-			},
-			{ rootMargin: "-42% 0px -52% 0px", threshold: 0 }
-		);
-
-		for (const section of sections) observer.observe(section);
-		return () => observer.disconnect();
-	});
+	onMount(updateProgress);
 </script>
 
 <svelte:window onscroll={updateProgress} onresize={updateProgress} />
