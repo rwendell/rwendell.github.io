@@ -30,7 +30,7 @@
 							alt="Ryan Wendell"
 							width="1200"
 							height="1200"
-							class="aspect-[4/5] w-full object-cover object-top"
+							class="aspect-[4/5] scale-125 w-full object-cover object-top"
 							decoding="async"
 						/>
 					</div>
