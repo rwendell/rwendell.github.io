@@ -54,7 +54,7 @@ Use `aube` for package operations. Do not use npm, pnpm, yarn, or bun.
 - Tinted Gowall is its own project entry with its own repository link; the user is its lead developer and maintainer. Do not collapse it back into an organization-level Tinted Theming card.
 - Dossier, shadcn-add, and Tinted Gowall are text-only cards. Do not add previews or mockups to them.
 - SlippiOS uses its project mark at `static/projects/slippios/icon.png` and the real menu screenshot at `static/projects/slippios/menu.png`. The card carousel cycles through the menu, settings, and sign-in screens.
-- The hero is the single about section: positioning, bio, toolbox, and profile links (GitHub, LinkedIn, Upwork). There is no separate About section; career history lives in the resume. Do not add a second bio or experience timeline.
+- The hero is the single about section: portrait, positioning, bio, toolbox, and profile links (GitHub, LinkedIn, Upwork). Use `static/ryan-wendell.jpg` as the portrait. There is no separate About section; career history lives in the resume. Do not add a second bio or experience timeline.
 - Contact holds direct contact options (email and LinkedIn). The footer is copyright only; do not add a second profile or section-link row.
 
 ## Project preview assets

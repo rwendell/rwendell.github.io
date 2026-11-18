@@ -19,11 +19,25 @@
 	<div class="container-page pt-16 pb-20 sm:pt-24 sm:pb-28 lg:pt-28 lg:pb-32">
 		<div class="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
 			<div>
-				<h1
-					class="max-w-[14ch] text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-foreground sm:text-6xl lg:text-7xl"
-				>
-					I'm <span class="text-kissa-orange">Ryan</span>,
-				</h1>
+				<div class="flex flex-col gap-6 sm:flex-row sm:items-end">
+					<div
+						class="mx-auto w-36 shrink-0 overflow-hidden rounded-2xl border border-border/70 bg-card shadow-paper sm:mx-0"
+					>
+						<img
+							src="/ryan-wendell.jpg"
+							alt="Ryan Wendell"
+							width="1200"
+							height="1200"
+							class="aspect-[4/5] w-full object-cover object-top"
+							decoding="async"
+						/>
+					</div>
+					<h1
+						class="max-w-[14ch] text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-foreground sm:text-6xl lg:text-7xl"
+					>
+						I'm <span class="text-kissa-orange">Ryan</span>,
+					</h1>
+				</div>
 				<p
 					class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
 				>
