@@ -108,7 +108,6 @@ scripts/
 static/
   resume/            PDF and themed previews
   projects/          project screenshots and wordmarks
-  ryan-wendell.jpg   hero portrait
   og.png             social preview image
 ```
 
