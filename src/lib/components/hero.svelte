@@ -17,7 +17,9 @@
 	<HexPattern id="hero-hex" class="hex-pattern" />
 
 	<div class="container-page pt-16 pb-20 sm:pt-24 sm:pb-28 lg:pt-28 lg:pb-32">
-		<div class="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
+		<div
+			class="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16"
+		>
 			<div>
 				<div class="flex flex-col gap-6 sm:flex-row sm:items-end">
 					<div
@@ -41,13 +43,16 @@
 				<p
 					class="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
 				>
-					a frontend engineer in Chicago. I build interfaces that are part of
-					the product, not a layer added at the end, and I make sure they work
-					by keyboard as well as mouse. I care about clear types, components
-					with clear boundaries, and docs that answer questions.
+					a frontend engineer in Chicago. I build interfaces that are
+					part of the product, not a layer added at the end, and I
+					make sure they work by keyboard as well as mouse. I care
+					about clear types, components with clear boundaries, and
+					docs that answer questions.
 				</p>
 
-				<div class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+				<div
+					class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm"
+				>
 					<a
 						href={site.github}
 						target="_blank"
@@ -84,15 +89,17 @@
 						class="h-1 bg-gradient-to-r from-kissa-orange via-kissa-yellow to-kissa-teal"
 					></div>
 					<div class="p-6 sm:p-7">
-						<p class="eyebrow">Toolbox</p>
-
 						<div class="mt-5 space-y-5">
 							{#each skillGroups as group (group.name)}
 								{@const Icon = skillIcons[group.icon]}
 								<div>
 									<div class="flex items-center gap-2">
-										<Icon class="size-3.5 text-muted-foreground" />
-										<h2 class="text-sm font-semibold tracking-tight">
+										<Icon
+											class="size-3.5 text-muted-foreground"
+										/>
+										<h2
+											class="text-sm font-semibold tracking-tight"
+										>
 											{group.name}
 										</h2>
 									</div>
@@ -112,7 +119,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<div class="kissa-rule container-page" aria-hidden="true"></div>
