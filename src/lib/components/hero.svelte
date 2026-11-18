@@ -17,7 +17,7 @@
 	<HexPattern id="hero-hex" class="hex-pattern" />
 
 	<div class="container-page pt-16 pb-20 sm:pt-24 sm:pb-28 lg:pt-28 lg:pb-32">
-		<div class="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
+		<div class="grid items-start gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
 			<div>
 				<h1
 					class="max-w-[14ch] text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.045em] text-foreground sm:text-6xl lg:text-7xl"
@@ -64,7 +64,20 @@
 				</div>
 			</div>
 
-			<div class="relative lg:pl-4">
+			<div class="relative flex flex-col gap-6 lg:pl-4">
+				<div
+					class="overflow-hidden rounded-2xl border border-border/70 bg-card shadow-paper"
+				>
+					<img
+						src="/ryan-wendell.jpg"
+						alt="Ryan Wendell"
+						width="1200"
+						height="1200"
+						class="aspect-[4/3] w-full object-cover object-top"
+						decoding="async"
+					/>
+				</div>
+
 				<div class="paper-card overflow-hidden rounded-2xl">
 					<div
 						class="h-1 bg-gradient-to-r from-kissa-orange via-kissa-yellow to-kissa-teal"
